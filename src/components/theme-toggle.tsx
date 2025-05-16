@@ -16,6 +16,7 @@ export function ThemeToggle() {
         onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         aria-label="Toggle theme"
         suppressHydrationWarning
+        className="transition-all duration-500"
       />
       <Moon className="h-4 w-4" />
     </div>
