@@ -1,6 +1,11 @@
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
 
+/**
+ * Fetches and displays top-level categories from the "categories" collection.
+ *
+ * Retrieves categories that do not have a parent, including their immediate nested data, and renders the result as formatted JSON within a React component.
+ */
 export default async function Home() {
   const payload = await getPayload({
     config: configPromise,
