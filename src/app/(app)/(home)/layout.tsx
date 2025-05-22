@@ -32,6 +32,7 @@ const Layout = async ({ children }: Props) => {
     subcategories: (doc.subcategories?.docs ?? []).map((doc) => ({
       // Due to depth 1, we are confident doc will be a type of Category.
       ...(doc as Category),
+      subcategories: undefined,
     })),
   }));
 
