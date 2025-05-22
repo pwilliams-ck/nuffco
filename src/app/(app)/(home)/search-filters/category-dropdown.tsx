@@ -1,6 +1,13 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+
 import { Category } from "@/payload-types";
+import { Button } from "@/components/ui/button";
+
+import { useDropdownPosition } from "./use-dropdown-position";
+import { SubcategoryMenu } from "./subcategory-menu";
 
 interface Props {
   category: Category;
@@ -13,17 +20,55 @@ export const CategoryDropdown = ({
   isActive,
   isNavigationHovered,
 }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const { getDropdownPosition } = useDropdownPosition(dropdownRef);
+
+  const onMouseEnter = () => {
+    if (category.subcategories) {
+      console.log("hi");
+      setIsOpen(true);
+    }
+  };
+
+  const onMouseLeave = () => setIsOpen(false);
+
+  const dropdownPosition = getDropdownPosition();
+
   return (
-    <div>
-      <Button
-        variant="elevated"
-        className={cn(
-          "h-11 px-4 bg-transparent border-transparent rounded-full hover:border-primary dark:border-transparent dark:bg-transparent dark:hover:border-primary",
-          isActive && !isNavigationHovered && "border-primary",
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="relative">
+        <Button
+          variant="elevated"
+          className={cn(
+            "h-11 px-4 bg-transparent border-transparent rounded-full hover:bg-white hover:border-primary dark:border-transparent dark:bg-transparent dark:hover:border-primary",
+            isActive && !isNavigationHovered && "bg-white border-primary",
+            isOpen &&
+              "bg-white border-primary dark:border-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] -translate-x-[4px] -translate-y-[4px]",
+          )}
+        >
+          {category.name}
+        </Button>
+        {category.subcategories && category.subcategories && (
+          <div
+            className={cn(
+              "opacity-0 absolute -bottom-3 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-l-transparent border-r-transparent border-b-primary left-1/2 translate-x-1/2",
+              isOpen && "opacity-100",
+            )}
+          />
         )}
-      >
-        {category.name}
-      </Button>
+      </div>
+
+      <SubcategoryMenu
+        category={category}
+        isOpen={isOpen}
+        position={dropdownPosition}
+      />
     </div>
   );
 };
