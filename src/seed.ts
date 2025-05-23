@@ -5,6 +5,7 @@ const categories = [
   {
     name: "All",
     slug: "all",
+    subcategories: [{ name: "All Selections", slug: "all-selections" }],
   },
   {
     name: "Sports Events & Lessons",

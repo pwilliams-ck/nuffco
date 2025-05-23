@@ -53,7 +53,7 @@ export const Navbar = () => {
     <nav className="h-20 pr-6 flex border-b justify-between font-medium">
       <Link href="/" className="pl-6 flex items-center">
         <span className={cn("text-5xl font-semibold", poppins.className)}>
-          nuffco
+          Nuffco
         </span>
       </Link>
 
