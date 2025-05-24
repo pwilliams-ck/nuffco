@@ -1,7 +1,9 @@
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
 import { Category } from "@/payload-types";
+import { LucideConstruction } from "lucide-react";
 
+import { AlertPopup } from "@/components/alert-popup";
 import { Footer } from "./footer";
 import { Navbar } from "./navbar";
 import { SearchFilters } from "./search-filters";
@@ -41,7 +43,16 @@ const Layout = async ({ children }: Props) => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <SearchFilters data={formattedData} />
-      <div className="flex-1 bg-[#f4f4f0] dark:bg-black/70">{children}</div>
+      <div className="flex-1 bg-[#f4f4f0] dark:bg-black/70">
+        <div className="inset-0 flex items-center justify-center z-10">
+          <AlertPopup
+            title="Heads up!"
+            description="Nuffco is currently in beta and is actively being worked on, come back soon!"
+            icon={<LucideConstruction className="h-6 w-6" />}
+          />
+        </div>
+        {children}
+      </div>
       <Footer />
     </div>
   );
