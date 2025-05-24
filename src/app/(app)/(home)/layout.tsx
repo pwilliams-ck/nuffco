@@ -43,7 +43,7 @@ const Layout = async ({ children }: Props) => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <SearchFilters data={formattedData} />
-      <div className="flex-1 bg-[#f4f4f0] dark:bg-black/70">
+      <div className="flex-1 bg-[#f4f4f0] dark:bg-input/30">
         <div className="inset-0 flex items-center justify-center z-10">
           <AlertPopup
             title="Heads up!"
