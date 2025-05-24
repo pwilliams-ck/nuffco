@@ -116,7 +116,7 @@ export const Categories = ({ data }: Props) => {
             )}
             onClick={() => setIsSidebarOpen(true)}
           >
-            View All
+            View All{isSidebarOpen}
             <ListFilterIcon className="ml-2" />
           </Button>
         </div>
