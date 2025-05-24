@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { CategoryDropdown } from "./category-dropdown";
 import { CustomCategory } from "../types";
 import { useParams } from "next/navigation";
+import { CategoriesSidebar } from "./categories-sidebar";
 
 interface Props {
   data: CustomCategory[];
@@ -67,7 +68,11 @@ export const Categories = ({ data }: Props) => {
   return (
     <div className="relative w-full">
       {/* {/* Categories sidebar */}
-      {/* <CategoriesSidebar open={isSidebarOpen} onOpenChange={setIsSidebarOpen} /> */}
+      <CategoriesSidebar
+        open={isSidebarOpen}
+        onOpenChange={setIsSidebarOpen}
+        data={data}
+      />
 
       {/* Hidden div to measure all items */}
       <div
@@ -116,7 +121,7 @@ export const Categories = ({ data }: Props) => {
             )}
             onClick={() => setIsSidebarOpen(true)}
           >
-            View All{isSidebarOpen}
+            View All
             <ListFilterIcon className="ml-2" />
           </Button>
         </div>

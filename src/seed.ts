@@ -120,18 +120,8 @@ const categories = [
       { name: "Graphic Design", slug: "graphic-design" },
       { name: "3D Modeling", slug: "3d-modeling" },
       { name: "Typography", slug: "typography" },
-    ],
-  },
-  {
-    name: "Drawing & Painting",
-    color: "#FFCAB0",
-    slug: "drawing-painting",
-    subcategories: [
-      { name: "Watercolor", slug: "watercolor" },
-      { name: "Acrylic", slug: "acrylic" },
-      { name: "Oil", slug: "oil" },
-      { name: "Pastel", slug: "pastel" },
-      { name: "Charcoal", slug: "charcoal" },
+      { name: "Drawing", slug: "drawing" },
+      { name: "Painting", slug: "painting" },
     ],
   },
   {
@@ -146,15 +136,15 @@ const categories = [
     ],
   },
   {
-    name: "Photography",
+    name: "Video & Photography",
     color: "#FF6B6B",
-    slug: "photography",
+    slug: "video-photography",
     subcategories: [
-      { name: "Portrait", slug: "portrait" },
-      { name: "Landscape", slug: "landscape" },
-      { name: "Urban", slug: "urban" },
+      { name: "Documentary", slug: "documentary" },
+      { name: "Comedy", slug: "comedy" },
       { name: "Nature", slug: "nature" },
-      { name: "Macro", slug: "macro" },
+      { name: "Urban", slug: "urban" },
+      { name: "Stock Photos", slug: "stock-photos" },
     ],
   },
 ];
