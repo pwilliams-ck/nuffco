@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { TRPCReactProvider } from "@/trpc/client";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -27,10 +29,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TRPCReactProvider>{children}</TRPCReactProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
 }
-
