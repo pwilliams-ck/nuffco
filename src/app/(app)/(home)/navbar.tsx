@@ -53,7 +53,7 @@ export const Navbar = () => {
     <nav className="h-20 pr-6 flex border-b justify-between font-medium">
       <Link href="/" className="pl-6 flex items-center">
         <span className={cn("text-5xl font-semibold", poppins.className)}>
-          Nuffco
+          CKP
         </span>
       </Link>
 
@@ -79,14 +79,14 @@ export const Navbar = () => {
         <Button
           asChild
           variant="secondary"
-          className="bg-transparent border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none hover:bg-teal-400 dark:hover:bg-pink-600"
+          className="bg-transparent border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
         >
           <Link href="/sign-in">Login</Link>
         </Button>
         <Button
           asChild
           variant="secondary"
-          className="bg-transparent border-l border-t-0 border-b-0 border-r mr-6 px-12 h-full rounded-none hover:bg-teal-400 dark:hover:bg-pink-600"
+          className="bg-transparent border-l border-t-0 border-b-0 border-r mr-6 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
         >
           <Link href="/sign-up">Register</Link>
         </Button>
