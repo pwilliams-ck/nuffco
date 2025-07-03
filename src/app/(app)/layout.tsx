@@ -11,8 +11,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Nuffco",
-  description: "Create, build, sell",
+  title: "CloudKey Platform",
+  description: "Enterprise Virtual Data Center Solutions",
 };
 
 export default function RootLayout({
