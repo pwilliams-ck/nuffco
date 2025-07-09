@@ -90,7 +90,7 @@ export const Categories = ({ data }: Props) => {
       {/* Visible items */}
       <div
         ref={containerRef}
-        className="flex flex-nowrap items-center"
+        className="flex flex-nowrap items-center justify-center"
         onMouseEnter={() => setIsAnyHovered(true)}
         onMouseLeave={() => setIsAnyHovered(false)}
       >
@@ -110,7 +110,7 @@ export const Categories = ({ data }: Props) => {
           <Button
             variant="elevated"
             className={cn(
-              "h-11 px-4 bg-transparent dark:bg-transparent border-transparent dark:border-transparent rounded-full hover:bg-white hover:border-primary dark:hover:border-primary text-black dark:text-white dark:hover:text-white",
+              "h-11 px-4 bg-transparent dark:bg-transparent border-transparent dark:border-transparent rounded-full hover:bg-white hover:border-primary dark:hover:border-primary text-black dark:text-white dark:hover:text-white 2xl:hidden",
               isActiveCategoryHidden &&
                 !isAnyHovered &&
                 "bg-white border-primary dark:bg-white dark:border-primary dark:text-black",

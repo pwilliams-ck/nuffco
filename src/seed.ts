@@ -155,15 +155,28 @@ const categories = [
     slug: "all",
   },
   {
-    name: "Virtual Data Center",
-    slug: "virtual-data-center",
+    name: "Compute",
+    slug: "compute",
     color: "#7EC8E3",
     subcategories: [
-      { name: "vDC Instances", slug: "vdc-instances" },
-      { name: "Resource Pools", slug: "resource-pools" },
-      { name: "Private Cloud", slug: "private-cloud" },
-      { name: "Multi-Tenant Infrastructure", slug: "multi-tenant" },
-      { name: "Dedicated Resources", slug: "dedicated-resources" },
+      { name: "Small Instances", slug: "small-instances" },
+      { name: "Medium Instances", slug: "medium-instances" },
+      { name: "Large Instances", slug: "large-instances" },
+      { name: "GPU Instances", slug: "gpu-instances" },
+      { name: "Reserved Instances", slug: "reserved-instances" },
+    ],
+  },
+  {
+    name: "Storage & Databases",
+    slug: "storage-databases",
+    color: "#FFB347",
+    subcategories: [
+      { name: "Block Storage", slug: "block-storage" },
+      { name: "Object Storage", slug: "object-storage" },
+      { name: "Database Services", slug: "database-services" },
+      { name: "In-Memory Databases", slug: "in-memory-databases" },
+      { name: "Backup Solutions", slug: "backup-solutions" },
+      { name: "High-Performance Storage", slug: "high-performance-storage" },
     ],
   },
   {
@@ -172,38 +185,8 @@ const categories = [
     color: "#FF6B6B",
     subcategories: [
       { name: "Zerto Replication", slug: "zerto-replication" },
-      {
-        name: "Continuous Data Protection",
-        slug: "continuous-data-protection",
-      },
-      { name: "Failover & Failback", slug: "failover-failback" },
-      { name: "DR Testing", slug: "dr-testing" },
-      { name: "RPO/RTO Solutions", slug: "rpo-rto-solutions" },
+      { name: "Continuous Data Protection", slug: "continuous-data-protection" },
       { name: "Multi-Site Replication", slug: "multi-site-replication" },
-    ],
-  },
-  {
-    name: "Compute & Resources",
-    slug: "compute-resources",
-    color: "#82C4C4",
-    subcategories: [
-      { name: "Virtual Machines", slug: "virtual-machines" },
-      { name: "vCPU Allocation", slug: "vcpu-allocation" },
-      { name: "Memory Resources", slug: "memory-resources" },
-      { name: "GPU Resources", slug: "gpu-resources" },
-      { name: "Reserved Instances", slug: "reserved-instances" },
-    ],
-  },
-  {
-    name: "Storage Solutions",
-    slug: "storage",
-    color: "#FFB347",
-    subcategories: [
-      { name: "Block Storage", slug: "block-storage" },
-      { name: "Object Storage", slug: "object-storage" },
-      { name: "High-Performance Storage", slug: "high-performance-storage" },
-      { name: "Replicated Storage", slug: "replicated-storage" },
-      { name: "Backup Solutions", slug: "backup-solutions" },
     ],
   },
   {
@@ -214,9 +197,6 @@ const categories = [
       { name: "Virtual Networks", slug: "virtual-networks" },
       { name: "Load Balancers", slug: "load-balancers" },
       { name: "VPN Services", slug: "vpn-services" },
-      { name: "Direct Connect", slug: "direct-connect" },
-      { name: "Bandwidth Options", slug: "bandwidth-options" },
-      { name: "Cross-Region Connectivity", slug: "cross-region-connectivity" },
     ],
   },
   {
@@ -226,9 +206,9 @@ const categories = [
     subcategories: [
       { name: "Firewall Services", slug: "firewall-services" },
       { name: "DDoS Protection", slug: "ddos-protection" },
-      { name: "Compliance Certifications", slug: "compliance-certs" },
+      { name: "Compliance Certifications", slug: "compliance-certifications" },
       { name: "Security Monitoring", slug: "security-monitoring" },
-      { name: "Encrypted Replication", slug: "encrypted-replication" },
+      { name: "Encryption Services", slug: "encryption-services" },
     ],
   },
   {
@@ -236,11 +216,9 @@ const categories = [
     slug: "managed-services",
     color: "#D8B5FF",
     subcategories: [
-      { name: "Managed Zerto", slug: "managed-zerto" },
-      { name: "Managed Backup", slug: "managed-backup" },
       { name: "Monitoring & Alerts", slug: "monitoring-alerts" },
-      { name: "24/7 Support", slug: "support-247" },
-      { name: "DR Orchestration", slug: "dr-orchestration" },
+      { name: "24/7 Support", slug: "24-7-support" },
+      { name: "Managed Backup", slug: "managed-backup" },
     ],
   },
   {
@@ -248,14 +226,19 @@ const categories = [
     slug: "hybrid-solutions",
     color: "#FFE066",
     subcategories: [
-      { name: "Hybrid Connectivity", slug: "hybrid-connectivity" },
-      {
-        name: "Cloud-to-Cloud Replication",
-        slug: "cloud-to-cloud-replication",
-      },
-      { name: "On-Premise to Cloud DR", slug: "on-premise-to-cloud-dr" },
-      { name: "Migration Services", slug: "migration-services" },
-      { name: "Physical Infrastructure", slug: "physical-infrastructure" },
+      { name: "Cloud-to-Cloud Sync", slug: "cloud-to-cloud-sync" },
+      { name: "On-Premise to Cloud", slug: "on-premise-to-cloud" },
+    ],
+  },
+  {
+    name: "Infrastructure Services",
+    slug: "infrastructure-services",
+    color: "#AFE062",
+    subcategories: [
+      { name: "Colocation Services", slug: "colocation-services" },
+      { name: "Web Hosting", slug: "web-hosting" },
+      { name: "Physical Storage", slug: "physical-storage" },
+      { name: "Dedicated Hardware", slug: "dedicated-hardware" },
     ],
   },
 ];

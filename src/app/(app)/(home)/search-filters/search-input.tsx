@@ -22,7 +22,7 @@ export const SearchInput = ({ disabled }: Props) => {
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-500" />
         <Input
           className="pl-8"
-          placeholder="Search CloudKey Platform..."
+          placeholder="Find CKP services..."
           disabled={disabled}
         />
       </div>
