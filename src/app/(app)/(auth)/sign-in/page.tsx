@@ -1,5 +1,11 @@
+import { SignInView } from "@/modules/ui/views/sign-in-view";
+
 const Page = () => {
-  return <div>Sign-in Page</div>;
+  return (
+    <div>
+      <SignInView />
+    </div>
+  );
 };
 
 export default Page;

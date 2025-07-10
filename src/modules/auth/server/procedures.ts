@@ -4,6 +4,7 @@ import { z } from "zod";
 
 import { baseProcedure, createTRPCRouter } from "@/trpc/init";
 import { AUTH_COOKIE } from "../constants";
+import { registerSchema } from "../schemas";
 
 export const authRouter = createTRPCRouter({
   session: baseProcedure.query(async ({ ctx }) => {
@@ -12,26 +13,12 @@ export const authRouter = createTRPCRouter({
 
     return session;
   }),
+  logout: baseProcedure.mutation(async () => {
+    const cookies = await getCookies();
+    cookies.delete(AUTH_COOKIE);
+  }),
   register: baseProcedure
-    .input(
-      z.object({
-        email: z.string().email(),
-        password: z.string(),
-        username: z
-          .string()
-          .min(3, "Must be 3 or more charracters")
-          .max(63, "Must be less than 63 characters")
-          .regex(
-            /^[a-z0-9][a-z0-9-]*[a-z0-9]$/,
-            "The username field may only contain lowercase letters, numbers, and hyphens, it must start and end with only letters and numbers",
-          )
-          .refine(
-            (val) => !val.includes("--"),
-            "Username can not contain consecutive hyphens",
-          )
-          .transform((val) => val.toLowerCase()),
-      }),
-    )
+    .input(registerSchema)
     .mutation(async ({ input, ctx }) => {
       await ctx.db.create({
         collection: "users",
