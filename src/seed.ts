@@ -159,11 +159,9 @@ const categories = [
     slug: "compute",
     color: "#7EC8E3",
     subcategories: [
-      { name: "Small Instances", slug: "small-instances" },
-      { name: "Medium Instances", slug: "medium-instances" },
-      { name: "Large Instances", slug: "large-instances" },
-      { name: "GPU Instances", slug: "gpu-instances" },
-      { name: "Reserved Instances", slug: "reserved-instances" },
+      { name: "VM Instances", slug: "vm-instances" },
+      { name: "Multi-VM Instances", slug: "multi-vm-instances" },
+      { name: "Datacenter Instances", slug: "datacenter-instances" },
     ],
   },
   {
@@ -171,7 +169,6 @@ const categories = [
     slug: "storage-databases",
     color: "#FFB347",
     subcategories: [
-      { name: "Block Storage", slug: "block-storage" },
       { name: "Object Storage", slug: "object-storage" },
       { name: "Database Services", slug: "database-services" },
       { name: "In-Memory Databases", slug: "in-memory-databases" },
@@ -185,7 +182,7 @@ const categories = [
     color: "#FF6B6B",
     subcategories: [
       { name: "Zerto Replication", slug: "zerto-replication" },
-      { name: "Continuous Data Protection", slug: "continuous-data-protection" },
+      { name: "Zerto Backup", slug: "zerto-backup" },
       { name: "Multi-Site Replication", slug: "multi-site-replication" },
     ],
   },
@@ -194,7 +191,8 @@ const categories = [
     slug: "networking",
     color: "#96E6B3",
     subcategories: [
-      { name: "Virtual Networks", slug: "virtual-networks" },
+      { name: "Firewall Services", slug: "firewall-services" },
+      { name: "DDoS Protection", slug: "ddos-protection" },
       { name: "Load Balancers", slug: "load-balancers" },
       { name: "VPN Services", slug: "vpn-services" },
     ],
@@ -204,10 +202,8 @@ const categories = [
     slug: "security-compliance",
     color: "#FF9AA2",
     subcategories: [
-      { name: "Firewall Services", slug: "firewall-services" },
-      { name: "DDoS Protection", slug: "ddos-protection" },
       { name: "Compliance Certifications", slug: "compliance-certifications" },
-      { name: "Security Monitoring", slug: "security-monitoring" },
+      { name: "Security & Monitoring", slug: "security-monitoring" },
       { name: "Encryption Services", slug: "encryption-services" },
     ],
   },
@@ -235,10 +231,10 @@ const categories = [
     slug: "infrastructure-services",
     color: "#AFE062",
     subcategories: [
-      { name: "Colocation Services", slug: "colocation-services" },
-      { name: "Web Hosting", slug: "web-hosting" },
-      { name: "Physical Storage", slug: "physical-storage" },
       { name: "Dedicated Hardware", slug: "dedicated-hardware" },
+      { name: "Colocation Racks", slug: "colocation-services" },
+      { name: "Private Cages", slug: "private-cages" },
+      { name: "On-Site Storage", slug: "on-site-storage" },
     ],
   },
 ];
