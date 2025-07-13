@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { useTRPC } from "@/trpc/client";
 
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -49,6 +51,9 @@ export const Navbar = () => {
   const pathName = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const trpc = useTRPC();
+  const session = useQuery(trpc.auth.session.queryOptions());
+
   return (
     <nav className="h-20 pr-6 flex border-b justify-between font-medium">
       <Link href="/" className="pl-6 flex items-center">
@@ -75,23 +80,35 @@ export const Navbar = () => {
         ))}
       </div>
 
-      <div className="hidden lg:flex">
-        <Button
-          asChild
-          variant="secondary"
-          className="bg-transparent border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
-        >
-          <Link href="/sign-in">Login</Link>
-        </Button>
-        <Button
-          asChild
-          variant="secondary"
-          className="bg-transparent border-l border-t-0 border-b-0 border-r mr-6 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
-        >
-          <Link href="/sign-up">Register</Link>
-        </Button>
-        <ThemeToggle />
-      </div>
+      {session.data?.user ? (
+        <div className="hidden lg:flex">
+          <Button
+            asChild
+            variant="secondary"
+            className="bg-transparent border-l border-t-0 border-b-0 border-r mr-6 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
+          >
+            <Link href="/admin">Dashboard</Link>
+          </Button>
+        </div>
+      ) : (
+        <div className="hidden lg:flex">
+          <Button
+            asChild
+            variant="secondary"
+            className="bg-transparent border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
+          >
+            <Link href="/sign-in">Login</Link>
+          </Button>
+          <Button
+            asChild
+            variant="secondary"
+            className="bg-transparent border-l border-t-0 border-b-0 border-r mr-6 px-12 h-full rounded-none hover:bg-sky-400 dark:hover:bg-amber-600"
+          >
+            <Link href="/sign-up">Register</Link>
+          </Button>
+          <ThemeToggle />
+        </div>
+      )}
       <div className="flex lg:hidden items-center justify-center">
         <Button
           variant="ghost"
