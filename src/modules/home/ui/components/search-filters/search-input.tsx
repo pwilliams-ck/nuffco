@@ -27,7 +27,7 @@ export const SearchInput = ({ disabled }: Props) => {
       <div className="relative w-full">
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-500" />
         <Input
-          className="pl-8"
+          className="pl-8 dark:bg-secondary dark:text-primary"
           placeholder="Find CKP services..."
           disabled={disabled}
         />
@@ -40,7 +40,11 @@ export const SearchInput = ({ disabled }: Props) => {
         <ListFilterIcon />
       </Button>
       {session.data?.user && (
-        <Button asChild variant="elevated" className="py-6">
+        <Button
+          asChild
+          variant="elevated"
+          className="py-6 dark:border-black dark:text-primary"
+        >
           <Link href="/library">
             <BookmarkCheckIcon />
             Library

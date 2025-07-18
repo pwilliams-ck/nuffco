@@ -89,6 +89,7 @@ export const Navbar = () => {
           >
             <Link href="/admin">Dashboard</Link>
           </Button>
+          <ThemeToggle />
         </div>
       ) : (
         <div className="hidden lg:flex">

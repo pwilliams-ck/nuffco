@@ -5,9 +5,9 @@ import { getQueryClient, trpc } from "@/trpc/server";
 import { LucideConstruction } from "lucide-react";
 
 import { AlertPopup } from "@/components/alert-popup";
-import { Footer } from "./footer";
-import { Navbar } from "./navbar";
-import { SearchFilters, SearchFiltersLoading } from "./search-filters";
+import { Footer } from "@/modules/home/ui/components/footer";
+import { Navbar } from "@/modules/home/ui/components/navbar";
+import { SearchFilters, SearchFiltersLoading } from "@/modules/home/ui/components/search-filters";
 
 interface Props {
   children: React.ReactNode;

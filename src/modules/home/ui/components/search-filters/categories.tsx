@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useParams } from "next/navigation";
 
 import { ListFilterIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import { CategoryDropdown } from "./category-dropdown";
-import { useParams } from "next/navigation";
 import { CategoriesSidebar } from "./categories-sidebar";
 import { CategoriesGetManyOutput } from "@/modules/categories/types";
 
@@ -110,10 +110,10 @@ export const Categories = ({ data }: Props) => {
           <Button
             variant="elevated"
             className={cn(
-              "h-11 px-4 bg-transparent dark:bg-transparent border-transparent dark:border-transparent rounded-full hover:bg-white hover:border-primary dark:hover:border-primary text-black dark:text-white dark:hover:text-white 2xl:hidden",
+              "h-11 px-4 bg-transparent dark:bg-transparent hover:bg-white hover:border-black border-transparent dark:border-transparent rounded-full dark:hover:bg-white dark:hover:border-black dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black dark:text-secondary dark:hover:text-black 2xl:hidden",
               isActiveCategoryHidden &&
                 !isAnyHovered &&
-                "bg-white border-primary dark:bg-white dark:border-primary dark:text-black",
+                "bg-white border-primary dark:bg-white dark:hover:border-primary dark:hover:bg-primary dark:text-secondary dark:hover:text-secondary",
             )}
             onClick={() => setIsSidebarOpen(true)}
           >
