@@ -43,7 +43,7 @@ export const SearchInput = ({ disabled }: Props) => {
         <Button
           asChild
           variant="elevated"
-          className="h-9 dark:border-black dark:text-primary"
+          className="h-9 bg-white dark:bg-white text-black dark:text-black dark:border-black dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
         >
           <Link href="/library">
             <BookmarkCheckIcon />
