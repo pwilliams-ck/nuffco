@@ -27,14 +27,14 @@ export const SearchInput = ({ disabled }: Props) => {
       <div className="relative w-full">
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-500" />
         <Input
-          className="pl-8 dark:bg-secondary dark:text-primary"
+          className="pl-8 h-9 dark:bg-secondary dark:text-primary"
           placeholder="Find CKP services..."
           disabled={disabled}
         />
       </div>
       <Button
         variant="elevated"
-        className="size-12 shrink-0 flex lg:hidden"
+        className="h-9 w-9 shrink-0 flex lg:hidden"
         onClick={() => setIsSidebarOpen(true)}
       >
         <ListFilterIcon />
@@ -43,7 +43,7 @@ export const SearchInput = ({ disabled }: Props) => {
         <Button
           asChild
           variant="elevated"
-          className="py-6 dark:border-black dark:text-primary"
+          className="h-9 dark:border-black dark:text-primary"
         >
           <Link href="/library">
             <BookmarkCheckIcon />

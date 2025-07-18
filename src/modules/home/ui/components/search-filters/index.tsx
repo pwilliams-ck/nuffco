@@ -21,8 +21,24 @@ export const SearchFilters = () => {
     (category) => category.slug === activeCategory,
   );
 
-  const activeCategoryColor = activeCategoryData?.color || DEFAULT_BG_COLOR;
+  // Force default color for "All Services" even if it exists in data
+  const isAllServices = activeCategory === "all";
+  const hasCustomColor = activeCategoryData?.color && !isAllServices;
+  
+  const activeCategoryColor = hasCustomColor ? activeCategoryData.color : null;
   const activeCategoryName = activeCategoryData?.name || null;
+  
+  // Use white text only when background is actually dark/black, otherwise black text
+  const isUsingDefaultColor = !hasCustomColor;
+  
+  let textColorClass;
+  if (isUsingDefaultColor) {
+    // Using default background - white text only in dark mode when bg is actually dark
+    textColorClass = "text-black dark:text-white";
+  } else {
+    // Category with custom color - black text (since category colors are typically light)
+    textColorClass = "text-black";
+  }
 
   const activeSubcategory = params.subcategory as string | undefined;
   const activeSubcategoryName =
@@ -32,10 +48,8 @@ export const SearchFilters = () => {
 
   return (
     <div
-      className="px-4 lg:px-12 py-8 border-b dark:hover:border-black dark:text-black dark:hover:bg-primary flex flex-col gap-4 w-full"
-      style={{
-        backgroundColor: activeCategoryColor,
-      }}
+      className={`px-4 lg:px-12 py-4 border-b dark:hover:border-black ${textColorClass} flex flex-col gap-3 w-full ${isUsingDefaultColor ? DEFAULT_BG_COLOR : ''}`}
+      style={activeCategoryColor ? { backgroundColor: activeCategoryColor } : {}}
     >
       <SearchInput />
       <div className="hidden lg:block">

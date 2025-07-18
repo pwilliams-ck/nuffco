@@ -55,7 +55,7 @@ export const Navbar = () => {
   const session = useQuery(trpc.auth.session.queryOptions());
 
   return (
-    <nav className="h-20 pr-6 flex border-b justify-between font-medium">
+    <nav className="h-16 pr-6 flex border-b justify-between font-medium">
       <Link href="/" className="pl-6 flex items-center">
         <span className={cn("text-5xl font-semibold", poppins.className)}>
           CKP

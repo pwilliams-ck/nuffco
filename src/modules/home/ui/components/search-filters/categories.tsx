@@ -110,10 +110,10 @@ export const Categories = ({ data }: Props) => {
           <Button
             variant="elevated"
             className={cn(
-              "h-11 px-4 bg-transparent dark:bg-transparent hover:bg-white hover:border-black border-transparent dark:border-transparent rounded-full dark:hover:bg-white dark:hover:border-black dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black dark:text-secondary dark:hover:text-black 2xl:hidden",
+              "h-9 px-4 bg-transparent dark:bg-transparent hover:bg-white hover:border-black border-transparent dark:border-transparent rounded-full dark:hover:bg-white dark:hover:border-black dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:text-black 2xl:hidden",
               isActiveCategoryHidden &&
                 !isAnyHovered &&
-                "bg-white border-primary dark:bg-white dark:hover:border-primary dark:hover:bg-primary dark:text-secondary dark:hover:text-secondary",
+                "bg-white border-primary dark:bg-white dark:hover:border-primary dark:hover:bg-primary text-black dark:text-black",
             )}
             onClick={() => setIsSidebarOpen(true)}
           >
