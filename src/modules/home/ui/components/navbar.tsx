@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -57,9 +58,20 @@ export const Navbar = () => {
   return (
     <nav className="h-16 pr-6 flex border-b justify-between font-medium">
       <Link href="/" className="pl-6 flex items-center">
-        <span className={cn("text-5xl font-semibold", poppins.className)}>
-          CKP
-        </span>
+        <Image
+          src="/plain-logo.png"
+          alt="Logo"
+          width={200}
+          height={100}
+          className="dark:hidden"
+        />
+        <Image
+          src="/plain-logo-dark.png"
+          alt="Logo"
+          width={200}
+          height={100}
+          className="hidden dark:block"
+        />
       </Link>
 
       <NavbarSidebar
