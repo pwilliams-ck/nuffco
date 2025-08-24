@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+
 // import { Poppins } from "next/font/google";
+
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
@@ -18,6 +20,7 @@ import { MenuIcon } from "lucide-react";
 //   subsets: ["latin"],
 //   weight: ["700"],
 // });
+
 
 interface NavbarItemProps {
   href: string;
