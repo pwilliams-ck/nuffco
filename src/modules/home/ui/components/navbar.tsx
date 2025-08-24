@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+
+// import { Poppins } from "next/font/google";
+
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { useTRPC } from "@/trpc/client";
@@ -12,6 +15,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { NavbarSidebar } from "./navbar-sidebar";
 import { MenuIcon } from "lucide-react";
+
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   weight: ["700"],
+// });
 
 
 interface NavbarItemProps {

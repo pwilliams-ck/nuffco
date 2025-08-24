@@ -132,7 +132,7 @@ export const SignInView = () => {
           </form>
         </Form>
       </div>
-      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat bg-[length:400px_200px] px-16 py-20"></div>
+      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat bg-[length:600px_187px] px-16 py-20"></div>
     </div>
   );
 };
