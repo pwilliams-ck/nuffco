@@ -13,6 +13,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Form,
   FormControl,
@@ -68,11 +69,20 @@ export const SignInView = () => {
           >
             <div className="flex items-center justify-between mb-8">
               <Link href="/">
-                <span
-                  className={cn("text-5xl font-semibold", poppins.className)}
-                >
-                  CKP
-                </span>
+                <Image
+                  src="/plain-logo.png"
+                  alt="Logo"
+                  width={160}
+                  height={80}
+                  className="dark:hidden"
+                />
+                <Image
+                  src="/plain-logo-dark.png"
+                  alt="Logo"
+                  width={160}
+                  height={80}
+                  className="hidden dark:block"
+                />
               </Link>
               <Button
                 asChild
@@ -85,7 +95,7 @@ export const SignInView = () => {
                 </Link>
               </Button>
             </div>
-            <h1 className="text-4xl font-medium">Welcome back to CKP!</h1>
+            <h1 className="text-4xl font-medium">Welcome back to aihelpd!</h1>
             <FormField
               name="email"
               render={({ field }) => (
@@ -122,7 +132,7 @@ export const SignInView = () => {
           </form>
         </Form>
       </div>
-      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat"></div>
+      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat bg-[length:400px_200px] px-16 py-20"></div>
     </div>
   );
 };
