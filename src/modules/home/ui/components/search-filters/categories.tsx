@@ -97,7 +97,7 @@ export const Categories = ({ data }: Props) => {
         {/* TODO: Hardcode "All" button */}
 
         <span className="text-xs xs:text-sm sm:text-base lg:text-lg font-black text-white dark:text-gray-100 mr-0.5 xs:mr-1 sm:mr-2 drop-shadow-lg shadow-black/50 whitespace-nowrap">
-          Our Customer&apos;s Products →
+          Our Customer&apos;s →
         </span>
 
         {data.slice(0, visibleCount).map((category) => (
