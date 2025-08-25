@@ -31,7 +31,8 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
       variant="outline"
       className={cn(
         "bg-transparent hover:bg-lime-400 dark:hover:bg-purple-600 hover:text-black dark:hover:text-white border-2 border-transparent hover:border-black dark:hover:border-white px-4 text-lg transition-all duration-200 font-bold uppercase tracking-wide hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-[1px] hover:-translate-y-[1px]",
-        isActive && "!border-black dark:!border-white border-2 bg-yellow-400 dark:bg-cyan-600 text-black dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]",
+        isActive &&
+          "!border-black dark:!border-white border-2 bg-yellow-400 dark:bg-cyan-600 text-black dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]",
       )}
     >
       <Link href={href}>{children}</Link>
@@ -40,7 +41,7 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
 };
 
 const navbarItems = [
-  { href: "/", children: "Home" },
+  { href: "/", children: "Our Products" },
   { href: "/about", children: "About" },
   { href: "/chat-widget", children: "Chat Widget" },
   { href: "/phone-interaction", children: "Phone Interaction" },
