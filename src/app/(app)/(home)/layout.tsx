@@ -29,7 +29,7 @@ const Layout = async ({ children }: Props) => {
         <div className="inset-0 flex items-center justify-center z-10">
           <AlertPopup
             title="Heads up!"
-            description="aihelpd is in beta and is actively being worked on, please come back soon!"
+            description="aihelpd is in beta and is actively being worked on. Our chat widget is in active development and will be ready ASAP!"
             icon={<LucideConstruction className="h-6 w-6" />}
           />
         </div>

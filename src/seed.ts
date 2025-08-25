@@ -287,7 +287,7 @@ const categories = [
   {
     name: "Commercial & Home",
     slug: "commercial-home",
-    color: "#f97316", // Orange
+    color: "#f0b794", // Light Coral
     subcategories: [
       { name: "HVAC Companies", slug: "hvac" },
       { name: "Plumbing Services", slug: "plumbing" },
@@ -302,7 +302,7 @@ const categories = [
   {
     name: "Medical Services",
     slug: "medical-services",
-    color: "#10b981", // Green
+    color: "#a8d5a8", // Light Green
     subcategories: [
       { name: "Dental Offices", slug: "dental" },
       { name: "Medical Spas", slug: "medical-spa" },
@@ -317,7 +317,7 @@ const categories = [
   {
     name: "Pet Services",
     slug: "pet-services",
-    color: "#8b5cf6", // Purple
+    color: "#d1b3e6", // Light Purple
     subcategories: [
       { name: "Veterinarians", slug: "veterinarians" },
       { name: "Pet Groomers", slug: "pet-groomers" },
@@ -329,7 +329,7 @@ const categories = [
   {
     name: "Sales Services",
     slug: "sales-services",
-    color: "#0891b2", // Cyan
+    color: "#8ec5d6", // Light Blue
     subcategories: [
       { name: "Real Estate Agencies", slug: "real-estate" },
       { name: "Insurance Agencies", slug: "insurance" },
@@ -339,7 +339,7 @@ const categories = [
   {
     name: "Law Services",
     slug: "law-services",
-    color: "#6366f1", // Indigo
+    color: "#b8c0f0", // Light Indigo
     subcategories: [
       { name: "Law Firms", slug: "law-firms" },
       { name: "Immigration Law", slug: "immigration-law" },
@@ -351,7 +351,7 @@ const categories = [
   {
     name: "Automotive",
     slug: "automotive",
-    color: "#dc2626", // Red
+    color: "#e6a8a8", // Light Rose
     subcategories: [
       { name: "Auto Repair", slug: "auto-repair" },
       { name: "Body Shops", slug: "body-shops" },
@@ -364,7 +364,7 @@ const categories = [
   {
     name: "DFW Locations",
     slug: "dfw-locations",
-    color: "#1e40af", // Cowboys blue
+    color: "#9cc7e0", // Light Sky Blue
     subcategories: [
       { name: "Princeton", slug: "princeton-tx" },
       { name: "McKinney", slug: "mckinney-tx" },

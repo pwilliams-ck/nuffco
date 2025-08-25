@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// import { Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
@@ -16,10 +16,10 @@ import { Button } from "@/components/ui/button";
 import { NavbarSidebar } from "./navbar-sidebar";
 import { MenuIcon } from "lucide-react";
 
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   weight: ["700"],
-// });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 
 interface NavbarItemProps {
@@ -46,9 +46,11 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
 const navbarItems = [
   { href: "/", children: "Home" },
   { href: "/about", children: "About" },
-  { href: "/features", children: "Features" },
-  { href: "/pricing", children: "Pricing" },
-  { href: "/contact", children: "Contact" },
+  { href: "/chat-widget", children: "Chat Widget" },
+  { href: "/phone-interaction", children: "Phone Interaction" },
+  { href: "/email-automation", children: "Email Automation" },
+  { href: "/booking-appointments", children: "Booking" },
+  { href: "/communications-suite", children: "Full Suite" },
 ];
 
 export const Navbar = () => {
@@ -60,7 +62,7 @@ export const Navbar = () => {
 
   return (
     <nav className="h-16 pr-6 flex border-b justify-between font-medium">
-      <Link href="/" className="pl-6 flex items-center">
+      <Link href="/" className="pl-6 flex items-center flex-shrink-0">
         <Image
           src="/plain-logo.png"
           alt="Logo"
@@ -83,7 +85,10 @@ export const Navbar = () => {
         items={navbarItems}
       />
 
-      <div className="items-center gap-4 hidden lg:flex xl:pl-40">
+      <div className="items-center gap-4 hidden lg:flex">
+        <span className={`text-xs xs:text-sm sm:text-base lg:text-lg text-pink-500 dark:text-pink-400 mr-0.5 xs:mr-1 sm:mr-2 whitespace-nowrap ${poppins.className}`}>
+          Our Products →
+        </span>
         {navbarItems.map((item) => (
           <NavbarItem
             key={item.href}
