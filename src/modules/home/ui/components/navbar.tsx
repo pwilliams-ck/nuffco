@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// import { Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
@@ -16,10 +16,10 @@ import { Button } from "@/components/ui/button";
 import { NavbarSidebar } from "./navbar-sidebar";
 import { MenuIcon } from "lucide-react";
 
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   weight: ["700"],
-// });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 
 interface NavbarItemProps {
@@ -45,10 +45,11 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
 
 const navbarItems = [
   { href: "/", children: "Home" },
-  { href: "/about", children: "About" },
-  { href: "/features", children: "Features" },
-  { href: "/pricing", children: "Pricing" },
-  { href: "/contact", children: "Contact" },
+  { href: "/chat-widget", children: "Chat Widget" },
+  { href: "/phone-interaction", children: "Phone Interaction" },
+  { href: "/email-automation", children: "Email Automation" },
+  { href: "/booking-appointments", children: "Booking" },
+  { href: "/communications-suite", children: "Full Suite" },
 ];
 
 export const Navbar = () => {
