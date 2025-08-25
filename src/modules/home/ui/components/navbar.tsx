@@ -45,6 +45,7 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
 
 const navbarItems = [
   { href: "/", children: "Home" },
+  { href: "/about", children: "About" },
   { href: "/chat-widget", children: "Chat Widget" },
   { href: "/phone-interaction", children: "Phone Interaction" },
   { href: "/email-automation", children: "Email Automation" },
