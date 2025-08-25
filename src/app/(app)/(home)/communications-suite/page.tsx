@@ -100,36 +100,36 @@ const Page = () => {
                 <div className="flex items-center">
                   <Settings className="h-6 w-6 text-blue-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">System architecture design: 3-4 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Custom solution planning and design</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Planning & architecture: 2-3 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Custom solution planning and system design</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Rocket className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Core platform development: 16-24 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Building your complete communications hub</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Core development & integration: 12-18 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Building your complete communications hub with all integrations</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Zap className="h-6 w-6 text-green-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Custom integrations: 8-12 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Connecting to your existing systems</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Testing & optimization: 4-5 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Enterprise-grade quality assurance and performance tuning</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-6 w-6 text-orange-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Testing & optimization: 4-6 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Enterprise-grade quality assurance</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Training & deployment: 2-4 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Team training and comprehensive go-live support</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Users className="h-6 w-6 text-teal-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Training & deployment: 2-4 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Team training and go-live support</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Post-launch optimization: 2 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Fine-tuning based on real-world usage</p>
                   </div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6">

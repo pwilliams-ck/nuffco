@@ -62,21 +62,21 @@ const Page = () => {
                 <div className="flex items-center">
                   <Settings className="h-6 w-6 text-blue-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Setup: 4-6 hours</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Initial configuration and integration</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Setup & Integration: 3-5 days</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Initial configuration and website integration</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Sparkles className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Customization: 1-2 days</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Brand matching and feature tuning</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Customization & Training: 1-2 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Brand matching, AI training, and feature tuning</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Rocket className="h-6 w-6 text-orange-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Testing & Launch: 3 days</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Testing & Launch: 2-4 days</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Quality assurance and go-live</p>
                   </div>
                 </div>
