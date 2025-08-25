@@ -66,28 +66,28 @@ const Page = () => {
                 <div className="flex items-center">
                   <Calendar className="h-6 w-6 text-blue-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Calendar integration: 1-2 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Calendar integration: 2-3 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Connect to Google, Outlook, Apple Calendar, and more</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Settings className="h-6 w-6 text-orange-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Booking system setup: 3-4 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Booking system development: 4-8 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Custom booking flows and business rules</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Zap className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">AI training & testing: 2-3 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">AI training & optimization: 3-4 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Learning your booking patterns and preferences</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Rocket className="h-6 w-6 text-green-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Multi-channel deployment: 1-2 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Multi-channel deployment: 3 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Website, phone, email, and social media integration</p>
                   </div>
                 </div>
