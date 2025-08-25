@@ -62,7 +62,7 @@ export const Navbar = () => {
 
   return (
     <nav className="h-16 pr-6 flex border-b justify-between font-medium">
-      <Link href="/" className="pl-6 flex items-center">
+      <Link href="/" className="pl-6 flex items-center flex-shrink-0">
         <Image
           src="/plain-logo.png"
           alt="Logo"
@@ -85,8 +85,8 @@ export const Navbar = () => {
         items={navbarItems}
       />
 
-      <div className="items-center gap-4 hidden lg:flex xl:pl-40">
-        <span className={`text-lg text-pink-500 dark:text-pink-400 mr-2 ${poppins.className}`}>
+      <div className="items-center gap-4 hidden lg:flex">
+        <span className={`text-xs xs:text-sm sm:text-base lg:text-lg text-pink-500 dark:text-pink-400 mr-0.5 xs:mr-1 sm:mr-2 whitespace-nowrap ${poppins.className}`}>
           Our Products →
         </span>
         {navbarItems.map((item) => (
