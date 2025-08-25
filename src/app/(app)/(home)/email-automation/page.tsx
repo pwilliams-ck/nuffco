@@ -66,21 +66,21 @@ const Page = () => {
                 <div className="flex items-center">
                   <Settings className="h-6 w-6 text-blue-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Email system integration: 1 week</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Email system integration: 1-2 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Connect to your existing email infrastructure</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Brain className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">AI training on your data: 2-3 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">AI training on your data: 2-4 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Custom learning from your historical emails</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <FileText className="h-6 w-6 text-green-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Response template creation: 1 week</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Response template creation: 1-2 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Building your personalized response library</p>
                   </div>
                 </div>

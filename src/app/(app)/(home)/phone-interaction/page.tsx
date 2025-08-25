@@ -66,21 +66,21 @@ const Page = () => {
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-green-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Phone number setup: 2-4 days</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Dedicated business line configuration</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Phone system setup: 1-2 weeks</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Dedicated business line and infrastructure</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Brain className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">AI training: 1-2 weeks</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">AI training & development: 2-4 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Custom training on your business knowledge</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Zap className="h-6 w-6 text-yellow-500 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Voice optimization: 1 week</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">Voice optimization & testing: 1-2 weeks</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Fine-tuning for natural conversations</p>
                   </div>
                 </div>
