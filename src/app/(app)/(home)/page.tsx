@@ -1,6 +1,16 @@
 "use client";
 import Link from "next/link";
-import { MessageCircle, Phone, Mail, Calendar, Package, MapPin, Heart, Zap, Sparkles } from "lucide-react";
+import {
+  MessageCircle,
+  Phone,
+  Mail,
+  Calendar,
+  Package,
+  MapPin,
+  Heart,
+  Zap,
+  Sparkles,
+} from "lucide-react";
 export default function Home() {
   // const trpc = useTRPC();
   // const { data } = useQuery(trpc.auth.session.queryOptions());
@@ -75,12 +85,20 @@ export default function Home() {
             const IconComponent = product.icon;
             return (
               <Link key={index} href={product.href}>
-                <div className={`border rounded-xl p-6 text-left hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 ${product.bgColor} border-gray-200 dark:border-gray-700`}>
+                <div
+                  className={`border rounded-xl p-6 text-left hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 ${product.bgColor} border-gray-200 dark:border-gray-700`}
+                >
                   <div className="flex items-center mb-4">
-                    <div className={`p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg mr-4`}>
-                      <IconComponent className={`h-8 w-8 ${product.iconColor}`} />
+                    <div
+                      className={`p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg mr-4`}
+                    >
+                      <IconComponent
+                        className={`h-8 w-8 ${product.iconColor}`}
+                      />
                     </div>
-                    <h3 className="font-bold text-xl text-gray-900 dark:text-white">{product.name}</h3>
+                    <h3 className="font-bold text-xl text-gray-900 dark:text-white">
+                      {product.name}
+                    </h3>
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center">
@@ -93,7 +111,9 @@ export default function Home() {
                         {product.disclaimer}
                       </p>
                     )}
-                    <p className="font-bold text-xl text-gray-900 dark:text-white">{product.price}</p>
+                    <p className="font-bold text-xl text-gray-900 dark:text-white">
+                      {product.price}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -120,10 +140,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <p className="text-center">
-                Whether you&apos;re a local business owner, influencer, community
-                leader, or anyone with good intentions and absolutely no intent to
-                harm,
-                <strong className="text-blue-600 dark:text-blue-400 flex items-center justify-center mx-2"> 
+                Whether you&apos;re a local business owner, influencer,
+                community leader, or anyone with good intentions and absolutely
+                no intent to harm,
+                <strong className="text-blue-600 dark:text-blue-400 flex items-center justify-center mx-2">
                   <Sparkles className="h-5 w-5 mr-2" />
                   I am here for you
                   <Sparkles className="h-5 w-5 ml-2" />
