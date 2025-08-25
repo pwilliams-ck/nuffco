@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
+// import Link from "next/link";
 
 import { ListFilterIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -90,16 +91,10 @@ export const Categories = ({ data }: Props) => {
       {/* Visible items */}
       <div
         ref={containerRef}
-        className="flex flex-nowrap items-center justify-center"
+        className="flex flex-nowrap items-center justify-center gap-4"
         onMouseEnter={() => setIsAnyHovered(true)}
         onMouseLeave={() => setIsAnyHovered(false)}
       >
-        {/* TODO: Hardcode "All" button */}
-
-        <span className="text-xs xs:text-sm sm:text-base lg:text-lg font-black text-white dark:text-gray-100 mr-0.5 xs:mr-1 sm:mr-2 drop-shadow-lg shadow-black/50 whitespace-nowrap">
-          Our Customers →
-        </span>
-
         {data.slice(0, visibleCount).map((category) => (
           <div key={category.id}>
             <CategoryDropdown
