@@ -28,11 +28,11 @@ const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
   return (
     <Button
       asChild
-      variant="outline"
+      variant="ghost"
       className={cn(
-        "bg-transparent hover:bg-lime-400 dark:hover:bg-purple-600 hover:text-black dark:hover:text-white border-2 border-transparent hover:border-black dark:hover:border-white px-4 text-lg transition-all duration-200 font-bold uppercase tracking-wide hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-[1px] hover:-translate-y-[1px]",
+        "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-md",
         isActive &&
-          "!border-black dark:!border-white border-2 bg-yellow-400 dark:bg-cyan-600 text-black dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]",
+          "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold",
       )}
     >
       <Link href={href}>{children}</Link>
@@ -57,7 +57,7 @@ export const Navbar = () => {
   const session = useQuery(trpc.auth.session.queryOptions());
 
   return (
-    <nav className="h-16 pr-6 flex border-b-4 border-black dark:border-white justify-between font-medium bg-white dark:bg-black relative">
+    <nav className="h-16 pr-6 flex border-b border-slate-200 dark:border-slate-700 justify-between font-medium bg-white dark:bg-slate-900 relative shadow-sm">
       <Link href="/" className="pl-6 flex items-center flex-shrink-0">
         <Image
           src="/plain-logo.png"
@@ -88,31 +88,31 @@ export const Navbar = () => {
       </div>
 
       {session.data?.user ? (
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex items-center gap-3">
           <Button
             asChild
-            variant="elevated"
-            className="bg-cyan-400 dark:bg-orange-600 border-2 border-black dark:border-white mr-6 px-8 h-12 my-2 font-black uppercase tracking-wide text-black dark:text-white hover:bg-lime-400 dark:hover:bg-purple-600"
+            variant="default"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 h-10 transition-colors duration-200"
           >
             <Link href="/admin">Dashboard</Link>
           </Button>
           <ThemeToggle />
         </div>
       ) : (
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex items-center gap-3">
           <Button
             asChild
-            variant="elevated"
-            className="bg-yellow-400 dark:bg-blue-600 border-2 border-black dark:border-white px-6 h-12 my-2 font-black uppercase tracking-wide text-black dark:text-white hover:bg-lime-400 dark:hover:bg-purple-600 mr-3"
+            variant="ghost"
+            className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium px-4 h-10 transition-colors duration-200"
           >
             <Link href="/sign-in">Login</Link>
           </Button>
           <Button
             asChild
-            variant="elevated"
-            className="bg-pink-400 dark:bg-green-600 border-2 border-black dark:border-white mr-6 px-6 h-12 my-2 font-black uppercase tracking-wide text-black dark:text-white hover:bg-lime-400 dark:hover:bg-purple-600"
+            variant="default"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 h-10 transition-colors duration-200 shadow-sm"
           >
-            <Link href="/sign-up">Register</Link>
+            <Link href="/sign-up">Start Free Trial</Link>
           </Button>
           <ThemeToggle />
         </div>

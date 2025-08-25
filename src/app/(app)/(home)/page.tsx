@@ -1,281 +1,387 @@
 "use client";
 import Link from "next/link";
-import { BrutalistBackground } from "@/components/brutalist-background";
-import {
-  MessageCircle,
+import { 
+  Check, 
+  Clock, 
+  Shield, 
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  ArrowRight,
   Phone,
+  MessageSquare,
   Mail,
   Calendar,
-  Package,
-  MapPin,
-  Heart,
   Zap,
-  Sparkles,
+  ChevronRight
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+
 export default function Home() {
-  // const trpc = useTRPC();
-  // const { data } = useQuery(trpc.auth.session.queryOptions());
   const products = [
     {
-      name: "Chat Widget",
-      price: "$299/month",
-      timeline: "1-3 weeks*",
-      disclaimer: "Timeline may be subject to delays",
+      name: "Live Chat",
+      price: 299,
+      originalPrice: 599,
+      savings: "Save $300",
+      timeline: "Live in 5 days",
       href: "/chat-widget",
-      icon: MessageCircle,
-      iconColor: "text-blue-500",
-      bgColor: "bg-blue-50 dark:bg-blue-900/20",
+      icon: MessageSquare,
+      popular: true,
+      features: [
+        "24/7 AI-powered responses",
+        "Instant customer support",
+        "99.9% uptime guarantee",
+        "Unlimited conversations"
+      ],
+      spotsLeft: 3
     },
     {
-      name: "Phone Interaction",
-      price: "$499/month",
-      timeline: "4-8 weeks*",
-      disclaimer: "Timeline may be subject to delays",
+      name: "Phone AI",
+      price: 125,
+      originalPrice: 250,
+      savings: "Save $125",
+      timeline: "Live in 2 weeks",
       href: "/phone-interaction",
       icon: Phone,
-      iconColor: "text-green-500",
-      bgColor: "bg-green-50 dark:bg-green-900/20",
+      features: [
+        "Natural voice conversations",
+        "Call routing & screening",
+        "Appointment booking",
+        "CRM integration"
+      ],
+      spotsLeft: 7
     },
     {
       name: "Email Automation",
-      price: "$399/month",
-      timeline: "4-8 weeks*",
-      disclaimer: "Timeline may be subject to delays",
+      price: 100,
+      originalPrice: 200,
+      savings: "Save $100",
+      timeline: "Live in 1 week",
       href: "/email-automation",
       icon: Mail,
-      iconColor: "text-purple-500",
-      bgColor: "bg-purple-50 dark:bg-purple-900/20",
+      features: [
+        "Smart email responses",
+        "Lead nurturing flows",
+        "Personalization at scale",
+        "Analytics dashboard"
+      ],
+      spotsLeft: 5
     },
     {
-      name: "Booking",
-      price: "$599/month",
-      timeline: "12-18 weeks*",
-      disclaimer: "Timeline may be subject to delays",
+      name: "Booking System",
+      price: 150,
+      originalPrice: 300,
+      savings: "Save $150",
+      timeline: "Live in 3 weeks",
       href: "/booking-appointments",
       icon: Calendar,
-      iconColor: "text-orange-500",
-      bgColor: "bg-orange-50 dark:bg-orange-900/20",
+      features: [
+        "Smart scheduling",
+        "Payment processing",
+        "Reminder automation",
+        "Calendar sync"
+      ],
+      spotsLeft: 4
     },
     {
-      name: "Full Suite",
-      price: "$1,499/month",
-      timeline: "22-28 weeks*",
-      disclaimer: "Timeline may be subject to delays",
+      name: "Complete Suite",
+      price: 375,
+      originalPrice: 1000,
+      savings: "Save $625!",
+      timeline: "Full setup in 4 weeks",
       href: "/communications-suite",
-      icon: Package,
-      iconColor: "text-indigo-500",
-      bgColor: "bg-indigo-50 dark:bg-indigo-900/20",
-    },
+      icon: Zap,
+      bestValue: true,
+      features: [
+        "Everything included",
+        "Priority support",
+        "Custom integrations",
+        "Dedicated success manager"
+      ],
+      spotsLeft: 2
+    }
   ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "CEO, TechStart Dallas",
+      text: "Our response time went from hours to seconds. Customer satisfaction up 47% in just 2 months.",
+      rating: 5,
+      revenue: "+$32K/month"
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "Owner, Rodriguez Law Firm",
+      text: "The AI handles 80% of initial consultations. I've recovered 15 hours per week.",
+      rating: 5,
+      time: "15 hrs/week saved"
+    },
+    {
+      name: "Jennifer Wu",
+      role: "Director, Wellness Center",
+      text: "Booking no-shows dropped 73%. The ROI was immediate.",
+      rating: 5,
+      metric: "73% fewer no-shows"
+    }
+  ];
+
+  const stats = [
+    { value: "2.3M+", label: "Messages Handled" },
+    { value: "47%", label: "Avg Revenue Increase" },
+    { value: "< 2s", label: "Response Time" },
+    { value: "99.9%", label: "Uptime" }
+  ];
+
   return (
-    <div className="text-center pt-8 relative">
-      <BrutalistBackground density="chaos" />
-      {/* Neo-Brutalist Hero Section */}
-      <div className="mb-12 px-6">
-        <div className="max-w-4xl mx-auto relative">
-          <div className="border-4 border-black dark:border-white bg-lime-400 dark:bg-purple-600 p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] transform hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
-            <h1 className="text-5xl font-black mb-4 text-black dark:text-white tracking-tight">
-              aihelpd
+    <div className="min-h-screen">
+      {/* Professional Announcement Bar */}
+      <div className="bg-slate-900 dark:bg-slate-950 text-white py-3 text-center border-b border-slate-800">
+        <p className="text-sm font-medium">
+          Special Offer: Get started today and save 50% on your first 3 months
+        </p>
+      </div>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
+              <TrendingUp className="h-3 w-3 mr-1" />
+              Trusted by 500+ Dallas Businesses
+            </Badge>
+            
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+              Stop Losing $2,500+/Month <br />
+              to Missed Customer Messages
             </h1>
-            <div className="border-2 border-black dark:border-white bg-white dark:bg-black p-4 inline-block">
-              <p className="text-xl font-bold text-black dark:text-white uppercase tracking-wide">
-                AI AUTOMATED SOLUTIONS
-              </p>
+            
+            <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
+              Your competitors respond in seconds. You&apos;re taking hours. 
+              <span className="font-semibold text-slate-900 dark:text-white"> We&apos;ll fix that in 5 days or less.</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg font-semibold shadow-lg">
+                Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold">
+                Watch 2-Min Demo
+              </Button>
+            </div>
+
+            <div className="flex items-center justify-center gap-8 text-sm text-slate-600 dark:text-slate-400">
+              <span className="flex items-center gap-1">
+                <Check className="h-4 w-4 text-green-500" />
+                No credit card required
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="h-4 w-4 text-green-500" />
+                Setup in 5 minutes
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="h-4 w-4 text-green-500" />
+                Cancel anytime
+              </span>
             </div>
           </div>
-          {/* Decorative geometric elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500 border-2 border-black dark:border-white"></div>
-          <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-400 border-2 border-black dark:border-white"></div>
-        </div>
-      </div>
 
-      {/* <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">User Session:</h2>
-        <pre className="text-left bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-auto">
-          {JSON.stringify(data?.user, null, 2)}
-        </pre>
-      </div> */}
-      <div className="max-w-6xl mx-auto px-6" id="our-products">
-        {/* Neo-Brutalist Section Header */}
-        <div className="mb-8 relative">
-          <div className="border-4 border-black dark:border-white bg-yellow-400 dark:bg-blue-600 p-4 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]">
-            <h2 className="text-3xl font-black text-black dark:text-white uppercase tracking-wider">
-              Our Products
-            </h2>
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {stats.map((stat, i) => (
+              <div key={i} className="text-center">
+                <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">{stat.label}</p>
+              </div>
+            ))}
           </div>
-          <div className="absolute top-0 -right-2 w-4 h-4 bg-red-500 border-2 border-black dark:border-white"></div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => {
-            const IconComponent = product.icon;
-            const brutalistColors = [
-              { bg: 'bg-cyan-400 dark:bg-pink-600', accent: 'bg-purple-500' },
-              { bg: 'bg-lime-400 dark:bg-orange-600', accent: 'bg-blue-600' },
-              { bg: 'bg-pink-400 dark:bg-green-600', accent: 'bg-yellow-500' },
-              { bg: 'bg-orange-400 dark:bg-cyan-600', accent: 'bg-red-500' },
-              { bg: 'bg-purple-400 dark:bg-lime-600', accent: 'bg-green-500' }
-            ];
-            const colorScheme = brutalistColors[index % brutalistColors.length];
-            
-            return (
-              <Link key={index} href={product.href}>
-                <div
-                  className={`border-4 border-black dark:border-white p-6 text-left cursor-pointer transform transition-all duration-200 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-2 hover:-translate-y-2 ${colorScheme.bg} relative overflow-hidden`}
+      </section>
+
+      {/* Social Proof */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Dallas Businesses Are Already Winning
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, i) => (
+              <Card key={i} className="p-6 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-slate-700 dark:text-slate-300 mb-4">&quot;{testimonial.text}&quot;</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">{testimonial.role}</p>
+                  </div>
+                  <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
+                    {testimonial.revenue || testimonial.time || testimonial.metric}
+                  </Badge>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products with Urgency */}
+      <section className="py-20" id="our-products">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Choose Your Growth Plan</h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400">
+              Join 500+ Dallas businesses already ahead of you
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, i) => {
+              const Icon = product.icon;
+              return (
+                <Card 
+                  key={i} 
+                  className={`relative p-6 ${
+                    product.bestValue 
+                      ? 'border-2 border-blue-500 shadow-xl scale-105' 
+                      : 'border-slate-200 dark:border-slate-700'
+                  }`}
                 >
-                  {/* Decorative corner */}
-                  <div className={`absolute top-0 right-0 w-12 h-12 ${colorScheme.accent} border-l-4 border-b-4 border-black dark:border-white`}></div>
-                  
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div
-                      className={`p-3 border-3 border-black dark:border-white bg-white dark:bg-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] mr-4`}
-                    >
-                      <IconComponent
-                        className={`h-8 w-8 text-black dark:text-white`}
-                      />
-                    </div>
-                    <h3 className="font-black text-xl text-black dark:text-white uppercase tracking-wide">
-                      {product.name}
-                    </h3>
-                  </div>
-                  
-                  <div className="space-y-3 relative z-10">
-                    <div className="border-2 border-black dark:border-white bg-white dark:bg-black p-3">
-                      <p className="text-sm text-black dark:text-white font-bold flex items-center uppercase tracking-wide">
-                        <Zap className="h-4 w-4 mr-2" />
-                        {product.timeline}
-                      </p>
-                    </div>
-                    
-                    {product.disclaimer && (
-                      <div className="border-2 border-black dark:border-white bg-red-200 dark:bg-red-800 p-2">
-                        <p className="text-xs text-black dark:text-white font-bold flex items-center uppercase">
-                          <Sparkles className="h-3 w-3 mr-1" />
-                          {product.disclaimer}
-                        </p>
-                      </div>
-                    )}
-                    
-                    <div className="border-3 border-black dark:border-white bg-black dark:bg-white p-4 text-center">
-                      <p className="font-black text-2xl text-white dark:text-black">
-                        {product.price}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
+                  {product.bestValue && (
+                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white">
+                      BEST VALUE - SAVE $2,500
+                    </Badge>
+                  )}
+                  {product.popular && (
+                    <Badge className="absolute -top-3 right-4 bg-orange-500 text-white">
+                      MOST POPULAR
+                    </Badge>
+                  )}
 
-      {/* Neo-Brutalist Community Section */}
-      <div className="max-w-6xl mx-auto mt-20 px-6">
-        <div className="relative">
-          {/* Main brutal container */}
-          <div className="border-4 border-black dark:border-white bg-orange-400 dark:bg-green-600 p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] transform hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-2 hover:-translate-y-2 transition-all duration-300">
-            
-            {/* Header section */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] mr-4">
-                <MapPin className="h-12 w-12 text-black dark:text-white" />
-              </div>
-              <div className="border-4 border-black dark:border-white bg-pink-400 dark:bg-cyan-600 p-4">
-                <h2 className="text-3xl font-black text-black dark:text-white uppercase tracking-wider text-center">
-                  North Dallas & Beyond
-                </h2>
-              </div>
-            </div>
-            
-            {/* Content grid */}
-            <div className="grid md:grid-cols-3 gap-6">
-              
-              {/* Community Card */}
-              <div className="border-4 border-black dark:border-white bg-white dark:bg-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] relative">
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-red-500 border-2 border-black dark:border-white"></div>
-                <div className="flex items-start mb-4">
-                  <div className="border-2 border-black dark:border-white bg-red-400 p-2 mr-3">
-                    <Heart className="h-6 w-6 text-black dark:text-white" />
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                        <Icon className="h-6 w-6 text-blue-600" />
+                      </div>
+                      <h3 className="text-xl font-bold">{product.name}</h3>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-black text-lg text-black dark:text-white uppercase mb-2">Local Roots</h3>
-                    <p className="text-sm text-black dark:text-white font-bold leading-tight">
-                      Born and raised in North Dallas. I understand our community&apos;s unique challenges.
-                    </p>
+
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <span className="text-3xl font-bold">${product.price}</span>
+                      <span className="text-slate-500 line-through">${product.originalPrice}</span>
+                      <Badge variant="secondary" className="bg-green-100 text-green-800">
+                        {product.savings}
+                      </Badge>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">per month</p>
                   </div>
-                </div>
-              </div>
-              
-              {/* Mission Card */}
-              <div className="border-4 border-black dark:border-white bg-white dark:bg-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] relative">
-                <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 border-2 border-black dark:border-white"></div>
-                <div className="flex items-start mb-4">
-                  <div className="border-2 border-black dark:border-white bg-yellow-400 p-2 mr-3">
-                    <Zap className="h-6 w-6 text-black dark:text-white" />
+
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm">
+                        <Check className="h-4 w-4 text-green-500 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="space-y-3">
+                    <Badge variant="outline" className="w-full justify-center py-2 border-orange-300 text-orange-700 dark:border-orange-700 dark:text-orange-400">
+                      <Clock className="h-3 w-3 mr-1" />
+                      {product.timeline}
+                    </Badge>
+                    
+                    <Badge variant="outline" className="w-full justify-center py-2 border-red-300 text-red-700 dark:border-red-700 dark:text-red-400">
+                      Only {product.spotsLeft} spots left this month
+                    </Badge>
+
+                    <Button 
+                      asChild 
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
+                    >
+                      <Link href={product.href}>
+                        Get Started <ChevronRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    </Button>
                   </div>
-                  <div>
-                    <h3 className="font-black text-lg text-black dark:text-white uppercase mb-2">Our Mission</h3>
-                    <p className="text-sm text-black dark:text-white font-bold leading-tight">
-                      Make us all happier through AI-powered solutions that truly serve our community.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Support Card */}
-              <div className="border-4 border-black dark:border-white bg-white dark:bg-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] relative">
-                <div className="absolute -bottom-2 -right-2 w-10 h-4 bg-blue-500 border-2 border-black dark:border-white"></div>
-                <div className="flex items-start mb-4">
-                  <div className="border-2 border-black dark:border-white bg-blue-400 p-2 mr-3">
-                    <Sparkles className="h-6 w-6 text-black dark:text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-black text-lg text-black dark:text-white uppercase mb-2">Who We Serve</h3>
-                    <p className="text-sm text-black dark:text-white font-bold leading-tight">
-                      Local businesses, influencers, community leaders with good intentions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Call to Action */}
-            <div className="mt-8 text-center">
-              <div className="border-4 border-black dark:border-white bg-lime-400 dark:bg-purple-600 p-4 inline-block transform hover:-translate-y-1 transition-all duration-200">
-                <p className="font-black text-2xl text-black dark:text-white uppercase tracking-wide flex items-center justify-center">
-                  <Sparkles className="h-6 w-6 mr-3" />
-                  WE ARE HERE FOR YOU
-                  <Sparkles className="h-6 w-6 ml-3" />
-                </p>
-              </div>
-            </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Guarantee Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center justify-center p-3 bg-green-100 dark:bg-green-900 rounded-full mb-6">
+            <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
           </div>
           
-          {/* Decorative elements */}
-          <div className="absolute -top-6 -left-6 w-12 h-12 bg-purple-500 border-4 border-black dark:border-white transform rotate-45"></div>
-          <div className="absolute -bottom-6 -right-6 w-8 h-16 bg-cyan-400 border-4 border-black dark:border-white"></div>
-          <div className="absolute top-1/2 -right-4 w-6 h-6 bg-pink-500 border-2 border-black dark:border-white rounded-full"></div>
-        </div>
-      </div>
-      
-      {/* Neo-Brutalist Footer Accent */}
-      <div className="mt-20 mb-8 flex justify-center">
-        <div className="border-4 border-black dark:border-white bg-gradient-to-r from-pink-400 to-orange-400 dark:from-purple-600 dark:to-blue-600 p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] transform hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
-          <div className="flex items-center space-x-4">
-            <div className="border-2 border-black dark:border-white bg-white dark:bg-black p-2">
-              <Zap className="h-8 w-8 text-black dark:text-white" />
-            </div>
-            <div className="border-l-4 border-black dark:border-white pl-4">
-              <p className="font-black text-xl text-black dark:text-white uppercase tracking-wide">
-                Ready to Transform?
+          <h2 className="text-3xl font-bold mb-4">30-Day Money-Back Guarantee</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            If you don&apos;t see measurable results in 30 days, we&apos;ll refund every penny. 
+            No questions asked. That&apos;s how confident we are.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-4 bg-white dark:bg-slate-800">
+              <Users className="h-8 w-8 text-blue-600 mb-3 mx-auto" />
+              <h3 className="font-semibold mb-2">500+ Happy Clients</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                Join Dallas&apos;s fastest-growing businesses
               </p>
-              <p className="font-bold text-sm text-black dark:text-white uppercase">
-                Choose Your Solution Above
+            </Card>
+            <Card className="p-4 bg-white dark:bg-slate-800">
+              <Award className="h-8 w-8 text-blue-600 mb-3 mx-auto" />
+              <h3 className="font-semibold mb-2">Industry Leader</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                #1 rated AI solution in North Texas
               </p>
-            </div>
+            </Card>
+            <Card className="p-4 bg-white dark:bg-slate-800">
+              <Clock className="h-8 w-8 text-blue-600 mb-3 mx-auto" />
+              <h3 className="font-semibold mb-2">5-Day Setup</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                Fastest implementation guaranteed
+              </p>
+            </Card>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Your Competitors Are Already Using AI
+          </h2>
+          <p className="text-xl mb-8 opacity-95">
+            Every day you wait, you&apos;re losing customers to businesses that respond instantly.
+            Start your free trial now and see results in 5 days.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-6 text-lg font-semibold">
+              Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold">
+              Schedule Demo Call
+            </Button>
+          </div>
+          <p className="mt-6 text-sm opacity-75">
+            No credit card required • Setup in 5 minutes • Cancel anytime
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
