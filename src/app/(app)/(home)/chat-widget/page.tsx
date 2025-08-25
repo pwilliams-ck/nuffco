@@ -1,95 +1,144 @@
 import { MessageCircle, Clock, DollarSign, Zap, Sparkles, CheckCircle, Settings, Rocket } from "lucide-react";
+import { BrutalistBackground } from "@/components/brutalist-background";
 
 const Page = () => {
   return (
-    <div className="text-center pt-8 pb-16">
-      {/* Hero Section */}
-      <div className="max-w-5xl mx-auto px-6 mb-12">
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800">
+    <div className="text-center pt-8 pb-16 relative">
+      <BrutalistBackground density="heavy" />
+      {/* Neo-Brutalist Hero Section */}
+      <div className="max-w-5xl mx-auto px-6 mb-12 relative z-10">
+        <div className="border-4 border-black dark:border-white bg-cyan-400 dark:bg-pink-600 p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] transform hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-2 hover:-translate-y-2 transition-all duration-300">
           <div className="flex items-center justify-center mb-6">
-            <div className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-lg mr-4">
-              <MessageCircle className="h-12 w-12 text-blue-500" />
+            <div className="p-4 border-4 border-black dark:border-white bg-white dark:bg-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] mr-6">
+              <MessageCircle className="h-12 w-12 text-black dark:text-white" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Chat Widget</h1>
+            <div className="border-4 border-black dark:border-white bg-yellow-400 dark:bg-blue-600 p-4">
+              <h1 className="text-4xl font-black text-black dark:text-white uppercase tracking-wider">Chat Widget</h1>
+            </div>
           </div>
-          <p className="text-xl text-gray-700 dark:text-gray-300 mb-4">
-            Transform your website with AI-powered customer support that works 24/7
-          </p>
+          <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-6 mb-4">
+            <p className="text-xl font-bold text-black dark:text-white uppercase tracking-wide">
+              Transform your website with AI-powered customer support that works 24/7
+            </p>
+          </div>
           <div className="flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-yellow-500 mr-2" />
-            <span className="text-lg font-semibold text-purple-600 dark:text-purple-400">
-              Our fastest and most cost-effective solution!
-            </span>
-            <Sparkles className="h-5 w-5 text-yellow-500 ml-2" />
+            <div className="border-2 border-black dark:border-white bg-lime-400 dark:bg-purple-600 p-3 flex items-center">
+              <Sparkles className="h-6 w-6 text-black dark:text-white mr-2" />
+              <span className="text-lg font-black text-black dark:text-white uppercase tracking-wide">
+                Fastest & Most Cost-Effective!
+              </span>
+              <Sparkles className="h-6 w-6 text-black dark:text-white ml-2" />
+            </div>
           </div>
+          {/* Decorative elements */}
+          <div className="absolute -top-4 -right-4 w-12 h-12 bg-red-500 border-4 border-black dark:border-white transform rotate-45"></div>
+          <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-500 border-2 border-black dark:border-white"></div>
         </div>
       </div>
 
-      {/* Content Sections */}
-      <div className="max-w-5xl mx-auto px-6">
+      {/* Neo-Brutalist Content Sections */}
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Description Section */}
           <div className="lg:col-span-2">
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg mb-8">
+            <div className="border-4 border-black dark:border-white bg-lime-400 dark:bg-orange-600 p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] mb-8 relative">
+              <div className="absolute -top-2 -right-2 w-8 h-8 bg-purple-500 border-2 border-black dark:border-white transform rotate-45"></div>
               <div className="flex items-center mb-6">
-                <Zap className="h-8 w-8 text-blue-500 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">What You Get</h2>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-3 mr-4">
+                  <Zap className="h-8 w-8 text-black dark:text-white" />
+                </div>
+                <div className="border-3 border-black dark:border-white bg-pink-400 dark:bg-cyan-600 p-3">
+                  <h2 className="text-2xl font-black text-black dark:text-white uppercase tracking-wide">What You Get</h2>
+                </div>
               </div>
               <div className="space-y-4 text-left">
-                <p className="text-lg text-gray-700 dark:text-gray-300 flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  Embed our AI-powered chat widget directly into your existing website with zero hassle
-                </p>
-                <p className="text-lg text-gray-700 dark:text-gray-300 flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  Seamless integration with your current design - it looks like it was always there
-                </p>
-                <p className="text-lg text-gray-700 dark:text-gray-300 flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  24/7 instant responses for your customers, with smart escalation to your team
-                </p>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <p className="text-lg font-bold text-black dark:text-white flex items-start">
+                    <div className="border-2 border-black dark:border-white bg-green-500 p-1 mr-3 mt-1 flex-shrink-0">
+                      <CheckCircle className="h-4 w-4 text-black dark:text-white" />
+                    </div>
+                    Embed our AI-powered chat widget directly into your existing website with zero hassle
+                  </p>
+                </div>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <p className="text-lg font-bold text-black dark:text-white flex items-start">
+                    <div className="border-2 border-black dark:border-white bg-green-500 p-1 mr-3 mt-1 flex-shrink-0">
+                      <CheckCircle className="h-4 w-4 text-black dark:text-white" />
+                    </div>
+                    Seamless integration with your current design - it looks like it was always there
+                  </p>
+                </div>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <p className="text-lg font-bold text-black dark:text-white flex items-start">
+                    <div className="border-2 border-black dark:border-white bg-green-500 p-1 mr-3 mt-1 flex-shrink-0">
+                      <CheckCircle className="h-4 w-4 text-black dark:text-white" />
+                    </div>
+                    24/7 instant responses for your customers, with smart escalation to your team
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Timeline Section */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-8 border border-green-200 dark:border-green-800">
+            <div className="border-4 border-black dark:border-white bg-orange-400 dark:bg-green-600 p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] relative">
+              <div className="absolute -bottom-2 -left-2 w-6 h-12 bg-blue-500 border-2 border-black dark:border-white"></div>
               <div className="flex items-center mb-6">
-                <Clock className="h-8 w-8 text-green-500 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Implementation Timeline</h2>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-3 mr-4">
+                  <Clock className="h-8 w-8 text-black dark:text-white" />
+                </div>
+                <div className="border-3 border-black dark:border-white bg-yellow-400 dark:bg-purple-600 p-3">
+                  <h2 className="text-2xl font-black text-black dark:text-white uppercase tracking-wide">Implementation Timeline</h2>
+                </div>
               </div>
               <div className="space-y-4 text-left">
-                <div className="flex items-center">
-                  <Settings className="h-6 w-6 text-blue-500 mr-4 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Setup & Integration: 3-5 days</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Initial configuration and website integration</p>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <div className="flex items-center">
+                    <div className="border-2 border-black dark:border-white bg-blue-500 p-2 mr-4">
+                      <Settings className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <div>
+                      <p className="font-black text-black dark:text-white uppercase tracking-wide">Setup & Integration: 3-5 days</p>
+                      <p className="text-sm font-bold text-black dark:text-white">Initial configuration and website integration</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <Sparkles className="h-6 w-6 text-purple-500 mr-4 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Customization & Training: 1-2 weeks</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Brand matching, AI training, and feature tuning</p>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <div className="flex items-center">
+                    <div className="border-2 border-black dark:border-white bg-purple-500 p-2 mr-4">
+                      <Sparkles className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <div>
+                      <p className="font-black text-black dark:text-white uppercase tracking-wide">Customization & Training: 1-2 weeks</p>
+                      <p className="text-sm font-bold text-black dark:text-white">Brand matching, AI training, and feature tuning</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <Rocket className="h-6 w-6 text-orange-500 mr-4 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">Testing & Launch: 2-4 days</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Quality assurance and go-live</p>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-4">
+                  <div className="flex items-center">
+                    <div className="border-2 border-black dark:border-white bg-orange-500 p-2 mr-4">
+                      <Rocket className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <div>
+                      <p className="font-black text-black dark:text-white uppercase tracking-wide">Testing & Launch: 2-4 days</p>
+                      <p className="text-sm font-bold text-black dark:text-white">Quality assurance and go-live</p>
+                    </div>
                   </div>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg p-4 mt-6">
-                  <div className="flex items-center justify-center">
-                    <Zap className="h-6 w-6 text-yellow-500 mr-2" />
-                    <p className="font-bold text-xl text-gray-900 dark:text-white">
+                <div className="border-4 border-black dark:border-white bg-lime-400 dark:bg-cyan-600 p-4 mt-6">
+                  <div className="flex items-center justify-center mb-2">
+                    <div className="border-2 border-black dark:border-white bg-yellow-500 p-1 mr-2">
+                      <Zap className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <p className="font-black text-xl text-black dark:text-white uppercase tracking-wide">
                       Total: Ready in 1-3 weeks*
                     </p>
                   </div>
-                  <p className="text-xs text-orange-600 dark:text-orange-400 text-center mt-2 italic">
-                    Timeline may be subject to delays
-                  </p>
+                  <div className="border-2 border-black dark:border-white bg-red-400 dark:bg-red-600 p-2">
+                    <p className="text-xs font-black text-black dark:text-white text-center uppercase">
+                      Timeline may be subject to delays
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,52 +146,78 @@ const Page = () => {
 
           {/* Pricing Section */}
           <div className="lg:col-span-1">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-8 border border-purple-200 dark:border-purple-800 h-fit sticky top-8">
+            <div className="border-4 border-black dark:border-white bg-purple-400 dark:bg-blue-600 p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] h-fit sticky top-8 relative">
+              <div className="absolute -top-3 -left-3 w-10 h-10 bg-red-500 border-3 border-black dark:border-white transform rotate-45"></div>
               <div className="flex items-center justify-center mb-6">
-                <DollarSign className="h-8 w-8 text-purple-500 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Investment</h2>
+                <div className="border-3 border-black dark:border-white bg-white dark:bg-black p-3 mr-4">
+                  <DollarSign className="h-8 w-8 text-black dark:text-white" />
+                </div>
+                <div className="border-3 border-black dark:border-white bg-yellow-400 dark:bg-cyan-600 p-3">
+                  <h2 className="text-2xl font-black text-black dark:text-white uppercase tracking-wide">Investment</h2>
+                </div>
               </div>
               <div className="space-y-6 text-center">
-                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
-                  <div className="flex items-center justify-center mb-2">
-                    <Rocket className="h-6 w-6 text-orange-500 mr-2" />
-                    <p className="font-bold text-lg text-gray-900 dark:text-white">Setup Fee</p>
+                <div className="border-4 border-black dark:border-white bg-white dark:bg-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="border-2 border-black dark:border-white bg-orange-500 p-2 mr-2">
+                      <Rocket className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <div className="border-2 border-black dark:border-white bg-pink-400 dark:bg-green-600 p-2">
+                      <p className="font-black text-lg text-black dark:text-white uppercase">Setup Fee</p>
+                    </div>
                   </div>
-                  <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">$499</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">One-time only</p>
+                  <div className="border-3 border-black dark:border-white bg-red-400 dark:bg-purple-600 p-4">
+                    <p className="text-3xl font-black text-black dark:text-white">$499</p>
+                  </div>
+                  <div className="border-2 border-black dark:border-white bg-gray-200 dark:bg-gray-800 p-2 mt-2">
+                    <p className="text-sm font-bold text-black dark:text-white uppercase">One-time only</p>
+                  </div>
                 </div>
                 
-                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-2 border-purple-500">
-                  <div className="flex items-center justify-center mb-2">
-                    <Zap className="h-6 w-6 text-yellow-500 mr-2" />
-                    <p className="font-bold text-lg text-gray-900 dark:text-white">Monthly Service</p>
+                <div className="border-4 border-black dark:border-white bg-white dark:bg-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] relative">
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-lime-400 border-2 border-black dark:border-white"></div>
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="border-2 border-black dark:border-white bg-yellow-500 p-2 mr-2">
+                      <Zap className="h-6 w-6 text-black dark:text-white" />
+                    </div>
+                    <div className="border-2 border-black dark:border-white bg-cyan-400 dark:bg-orange-600 p-2">
+                      <p className="font-black text-lg text-black dark:text-white uppercase">Monthly</p>
+                    </div>
                   </div>
-                  <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">$299</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">/month</p>
+                  <div className="border-4 border-black dark:border-white bg-lime-400 dark:bg-pink-600 p-4 mb-4">
+                    <p className="text-4xl font-black text-black dark:text-white">$299</p>
+                    <p className="text-sm font-black text-black dark:text-white uppercase">/month</p>
+                  </div>
                   
                   <div className="text-left space-y-2 text-sm">
-                    <div className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-gray-700 dark:text-gray-300">Up to 1,000 conversations</span>
+                    <div className="border-2 border-black dark:border-white bg-green-200 dark:bg-green-800 p-2">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-black dark:text-white mr-2" />
+                        <span className="font-bold text-black dark:text-white">Up to 1,000 conversations</span>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-gray-700 dark:text-gray-300">24/7 AI support</span>
+                    <div className="border-2 border-black dark:border-white bg-green-200 dark:bg-green-800 p-2">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-black dark:text-white mr-2" />
+                        <span className="font-bold text-black dark:text-white">24/7 AI support</span>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-gray-700 dark:text-gray-300">Custom branding</span>
+                    <div className="border-2 border-black dark:border-white bg-green-200 dark:bg-green-800 p-2">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-black dark:text-white mr-2" />
+                        <span className="font-bold text-black dark:text-white">Custom branding</span>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="text-sm space-y-2">
-                  <p className="text-gray-600 dark:text-gray-400">
+                <div className="border-3 border-black dark:border-white bg-yellow-200 dark:bg-blue-800 p-4 text-sm space-y-2">
+                  <p className="font-black text-black dark:text-white uppercase text-center">
                     Additional conversations at $0.15 each
                   </p>
                   <div className="flex items-center justify-center">
-                    <Sparkles className="h-4 w-4 text-yellow-500 mr-1" />
-                    <p className="text-gray-500 dark:text-gray-500">
+                    <Sparkles className="h-4 w-4 text-black dark:text-white mr-1" />
+                    <p className="font-bold text-black dark:text-white uppercase">
                       Multi-year discounts available
                     </p>
                   </div>
