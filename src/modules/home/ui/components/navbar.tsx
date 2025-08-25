@@ -85,6 +85,9 @@ export const Navbar = () => {
       />
 
       <div className="items-center gap-4 hidden lg:flex xl:pl-40">
+        <span className={`text-lg text-pink-500 dark:text-pink-400 mr-2 ${poppins.className}`}>
+          Our Products →
+        </span>
         {navbarItems.map((item) => (
           <NavbarItem
             key={item.href}
