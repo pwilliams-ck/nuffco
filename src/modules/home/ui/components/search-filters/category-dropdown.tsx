@@ -46,11 +46,11 @@ export const CategoryDropdown = ({
         <Button
           variant="outline"
           className={cn(
-            "h-9 px-4 bg-transparent border-transparent font-bold text-black dark:text-white transition-all duration-200 hover:bg-cyan-400 dark:hover:bg-orange-600 hover:border-black dark:hover:border-white hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-[1px] hover:-translate-y-[1px] uppercase tracking-wide",
+            "h-9 px-4 bg-transparent border-transparent font-medium text-slate-700 dark:text-slate-300 transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white rounded-md",
             // Special styling for All Industries button
-            category.name === "All Industries" && "bg-pink-400 dark:bg-green-600 border-black dark:border-white border-2 text-black dark:text-white hover:bg-lime-400 dark:hover:bg-purple-600",
-            isActive && !isNavigationHovered && "bg-yellow-400 dark:bg-cyan-600 border-black dark:border-white border-2 text-black dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]",
-            isOpen && "bg-yellow-400 dark:bg-cyan-600 border-black dark:border-white border-2 text-black dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]",
+            category.name === "All Industries" && "bg-blue-50 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800 border text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50",
+            isActive && !isNavigationHovered && "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold",
+            isOpen && "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold",
           )}
         >
           <Link href={category.name === "All Industries" ? "/local-services" : `/${category.slug === "all" ? "" : category.slug}`}>
