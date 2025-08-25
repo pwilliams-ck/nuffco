@@ -21,7 +21,6 @@ const poppins = Poppins({
   weight: ["700"],
 });
 
-
 interface NavbarItemProps {
   href: string;
   children: React.ReactNode;
@@ -86,8 +85,10 @@ export const Navbar = () => {
       />
 
       <div className="items-center gap-4 hidden lg:flex">
-        <span className={`text-xs xs:text-sm sm:text-base lg:text-lg text-pink-500 dark:text-pink-400 mr-0.5 xs:mr-1 sm:mr-2 whitespace-nowrap ${poppins.className}`}>
-          Our Products →
+        <span
+          className={`text-xs xs:text-sm sm:text-base lg:text-lg text-pink-500 dark:text-pink-400 mr-0.5 xs:mr-1 sm:mr-2 whitespace-nowrap ${poppins.className}`}
+        >
+          Our Services →
         </span>
         {navbarItems.map((item) => (
           <NavbarItem
