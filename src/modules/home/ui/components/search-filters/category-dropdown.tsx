@@ -49,7 +49,7 @@ export const CategoryDropdown = ({
             "h-9 px-4 bg-transparent border-transparent rounded-full hover:bg-white hover:border-primary dark:border-transparent dark:bg-transparent dark:hover:border-secondary dark:hover:bg-white",
             isActive && !isNavigationHovered && "bg-white border-black dark:bg-white dark:border-black text-black",
             isOpen &&
-              "bg-white border-black dark:bg-white dark:border-black dark:hover:bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-x-[4px] -translate-y-[4px] dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+              "bg-white border-black dark:bg-white dark:border-black dark:hover:bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] -translate-x-[4px] -translate-y-[4px] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]",
           )}
         >
           <Link href={`/${category.slug === "all" ? "" : category.slug}`}>
