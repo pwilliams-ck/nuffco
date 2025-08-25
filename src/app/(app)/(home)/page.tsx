@@ -1,11 +1,8 @@
 "use client";
-
 import Link from "next/link";
-
 export default function Home() {
   // const trpc = useTRPC();
   // const { data } = useQuery(trpc.auth.session.queryOptions());
-
   const products = [
     {
       name: "Chat Widget",
@@ -38,7 +35,6 @@ export default function Home() {
       href: "/communications-suite",
     },
   ];
-
   return (
     <div className="text-center pt-8">
       <h1 className="text-4xl font-bold mb-8">aihelpd - AI Automated Solutions</h1>
@@ -49,7 +45,6 @@ export default function Home() {
           {JSON.stringify(data?.user, null, 2)}
         </pre>
       </div> */}
-
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6">Our Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
