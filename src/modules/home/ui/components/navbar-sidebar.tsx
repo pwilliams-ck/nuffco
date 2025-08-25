@@ -34,7 +34,7 @@ export const NavbarSidebar = ({ items, open, onOpenChange }: Props) => {
             <Link
               href={item.href}
               key={item.href}
-              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
             >
               {item.children}
             </Link>
@@ -42,13 +42,13 @@ export const NavbarSidebar = ({ items, open, onOpenChange }: Props) => {
           <div className="border-t">
             <Link
               href="/sign-in"
-              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
             >
               Login
             </Link>
             <Link
               href="/sign-up"
-              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+              className="flex items-center w-full text-left text-base font-medium p-4 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
             >
               Register
             </Link>
