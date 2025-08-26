@@ -350,7 +350,7 @@ const Page = () => {
               Start Free Trial - Then Just $75/month
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-100">
-              Try it free for 30 days. Regular price $125/month.
+              Try it free for 30 days. Regular price $75/month.
             </p>
           </div>
 
@@ -397,10 +397,10 @@ const Page = () => {
                   <div className="text-sm text-yellow-400 dark:text-yellow-300 font-semibold mb-2">
                     FLASH SALE PRICE
                   </div>
-                  <div className="text-5xl text-black font-bold mb-2">$299</div>
+                  <div className="text-5xl text-black font-bold mb-2">$75</div>
                   <div className="text-lg text-black opacity-75">per month</div>
                   <div className="text-sm text-black line-through opacity-60 mt-2">
-                    Regular: $499/month
+                    Regular: $200/month
                   </div>
                 </div>
 
