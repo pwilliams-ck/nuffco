@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import { 
-  Check, 
-  Clock, 
-  Shield, 
+import {
+  Check,
+  Clock,
+  Shield,
   Star,
   TrendingUp,
   Users,
@@ -14,7 +14,7 @@ import {
   Mail,
   Calendar,
   Zap,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -24,9 +24,9 @@ export default function Home() {
   const products = [
     {
       name: "Live Chat",
-      price: 299,
-      originalPrice: 599,
-      savings: "Save $300",
+      price: 75,
+      originalPrice: 150,
+      savings: "Save $150",
       timeline: "Live in 5 days",
       href: "/chat-widget",
       icon: MessageSquare,
@@ -35,9 +35,9 @@ export default function Home() {
         "24/7 AI-powered responses",
         "Instant customer support",
         "99.9% uptime guarantee",
-        "Unlimited conversations"
+        "Unlimited conversations",
       ],
-      spotsLeft: 3
+      spotsLeft: 3,
     },
     {
       name: "Phone AI",
@@ -51,15 +51,15 @@ export default function Home() {
         "Natural voice conversations",
         "Call routing & screening",
         "Appointment booking",
-        "CRM integration"
+        "CRM integration",
       ],
-      spotsLeft: 7
+      spotsLeft: 7,
     },
     {
       name: "Email Automation",
-      price: 100,
-      originalPrice: 200,
-      savings: "Save $100",
+      price: 75,
+      originalPrice: 150,
+      savings: "Save $150",
       timeline: "Live in 1 week",
       href: "/email-automation",
       icon: Mail,
@@ -67,15 +67,15 @@ export default function Home() {
         "Smart email responses",
         "Lead nurturing flows",
         "Personalization at scale",
-        "Analytics dashboard"
+        "Analytics dashboard",
       ],
-      spotsLeft: 5
+      spotsLeft: 5,
     },
     {
       name: "Booking System",
-      price: 150,
-      originalPrice: 300,
-      savings: "Save $150",
+      price: 200,
+      originalPrice: 400,
+      savings: "Save $200",
       timeline: "Live in 3 weeks",
       href: "/booking-appointments",
       icon: Calendar,
@@ -83,9 +83,9 @@ export default function Home() {
         "Smart scheduling",
         "Payment processing",
         "Reminder automation",
-        "Calendar sync"
+        "Calendar sync",
       ],
-      spotsLeft: 4
+      spotsLeft: 4,
     },
     {
       name: "Complete Suite",
@@ -100,10 +100,10 @@ export default function Home() {
         "Everything included",
         "Priority support",
         "Custom integrations",
-        "Dedicated success manager"
+        "Dedicated success manager",
       ],
-      spotsLeft: 2
-    }
+      spotsLeft: 2,
+    },
   ];
 
   const testimonials = [
@@ -112,29 +112,29 @@ export default function Home() {
       role: "CEO, TechStart Dallas",
       text: "Our response time went from hours to seconds. Customer satisfaction up 47% in just 2 months.",
       rating: 5,
-      revenue: "+$32K/month"
+      revenue: "+$32K/month",
     },
     {
       name: "Marcus Rodriguez",
       role: "Owner, Rodriguez Law Firm",
       text: "The AI handles 80% of initial consultations. I've recovered 15 hours per week.",
       rating: 5,
-      time: "15 hrs/week saved"
+      time: "15 hrs/week saved",
     },
     {
       name: "Jennifer Wu",
       role: "Director, Wellness Center",
       text: "Booking no-shows dropped 73%. The ROI was immediate.",
       rating: 5,
-      metric: "73% fewer no-shows"
-    }
+      metric: "73% fewer no-shows",
+    },
   ];
 
   const stats = [
     { value: "2.3M+", label: "Messages Handled" },
     { value: "47%", label: "Avg Revenue Increase" },
     { value: "< 2s", label: "Response Time" },
-    { value: "99.9%", label: "Uptime" }
+    { value: "99.9%", label: "Uptime" },
   ];
 
   return (
@@ -154,22 +154,32 @@ export default function Home() {
               <TrendingUp className="h-3 w-3 mr-1" />
               Trusted by 500+ Dallas Businesses
             </Badge>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
               Stop Losing $2,500+/Month <br />
               to Missed Customer Messages
             </h1>
-            
+
             <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto">
-              Your competitors respond in seconds. You&apos;re taking hours. 
-              <span className="font-semibold text-slate-900 dark:text-white"> We&apos;ll fix that in 5 days or less.</span>
+              Your competitors respond in seconds. You&apos;re taking hours.
+              <span className="font-semibold text-slate-900 dark:text-white">
+                {" "}
+                We&apos;ll fix that in 5 days or less.
+              </span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg font-semibold shadow-lg">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg font-semibold shadow-lg"
+              >
                 Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="px-8 py-6 text-lg font-semibold">
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-lg font-semibold"
+              >
                 Watch 2-Min Demo
               </Button>
             </div>
@@ -194,8 +204,12 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">{stat.label}</p>
+                <p className="text-3xl font-bold text-slate-900 dark:text-white">
+                  {stat.value}
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -210,20 +224,34 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, i) => (
-              <Card key={i} className="p-6 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700">
+              <Card
+                key={i}
+                className="p-6 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700"
+              >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 mb-4">&quot;{testimonial.text}&quot;</p>
+                <p className="text-slate-700 dark:text-slate-300 mb-4">
+                  &quot;{testimonial.text}&quot;
+                </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">{testimonial.role}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      {testimonial.role}
+                    </p>
                   </div>
                   <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
-                    {testimonial.revenue || testimonial.time || testimonial.metric}
+                    {testimonial.revenue ||
+                      testimonial.time ||
+                      testimonial.metric}
                   </Badge>
                 </div>
               </Card>
@@ -246,12 +274,12 @@ export default function Home() {
             {products.map((product, i) => {
               const Icon = product.icon;
               return (
-                <Card 
-                  key={i} 
+                <Card
+                  key={i}
                   className={`relative p-6 ${
-                    product.bestValue 
-                      ? 'border-2 border-blue-500 shadow-xl scale-105' 
-                      : 'border-slate-200 dark:border-slate-700'
+                    product.bestValue
+                      ? "border-2 border-blue-500 shadow-xl scale-105"
+                      : "border-slate-200 dark:border-slate-700"
                   }`}
                 >
                   {product.bestValue && (
@@ -276,13 +304,22 @@ export default function Home() {
 
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2 mb-2">
-                      <span className="text-3xl font-bold">${product.price}</span>
-                      <span className="text-slate-500 line-through">${product.originalPrice}</span>
-                      <Badge variant="secondary" className="bg-green-100 text-green-800">
+                      <span className="text-3xl font-bold">
+                        ${product.price}
+                      </span>
+                      <span className="text-slate-500 line-through">
+                        ${product.originalPrice}
+                      </span>
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                      >
                         {product.savings}
                       </Badge>
                     </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">per month</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      per month
+                    </p>
                   </div>
 
                   <ul className="space-y-2 mb-6">
@@ -295,17 +332,23 @@ export default function Home() {
                   </ul>
 
                   <div className="space-y-3">
-                    <Badge variant="outline" className="w-full justify-center py-2 border-orange-300 text-orange-700 dark:border-orange-700 dark:text-orange-400">
+                    <Badge
+                      variant="outline"
+                      className="w-full justify-center py-2 border-orange-300 text-orange-700 dark:border-orange-700 dark:text-orange-400"
+                    >
                       <Clock className="h-3 w-3 mr-1" />
                       {product.timeline}
                     </Badge>
-                    
-                    <Badge variant="outline" className="w-full justify-center py-2 border-red-300 text-red-700 dark:border-red-700 dark:text-red-400">
+
+                    <Badge
+                      variant="outline"
+                      className="w-full justify-center py-2 border-red-300 text-red-700 dark:border-red-700 dark:text-red-400"
+                    >
                       Only {product.spotsLeft} spots left this month
                     </Badge>
 
-                    <Button 
-                      asChild 
+                    <Button
+                      asChild
                       className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
                     >
                       <Link href={product.href}>
@@ -326,11 +369,14 @@ export default function Home() {
           <div className="inline-flex items-center justify-center p-3 bg-green-100 dark:bg-green-900 rounded-full mb-6">
             <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
           </div>
-          
-          <h2 className="text-3xl font-bold mb-4">30-Day Money-Back Guarantee</h2>
+
+          <h2 className="text-3xl font-bold mb-4">
+            30-Day Money-Back Guarantee
+          </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-            If you don&apos;t see measurable results in 30 days, we&apos;ll refund every penny. 
-            No questions asked. That&apos;s how confident we are.
+            If you don&apos;t see measurable results in 30 days, we&apos;ll
+            refund every penny. No questions asked. That&apos;s how confident we
+            are.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -366,14 +412,22 @@ export default function Home() {
             Your Competitors Are Already Using AI
           </h2>
           <p className="text-xl mb-8 opacity-95">
-            Every day you wait, you&apos;re losing customers to businesses that respond instantly.
-            Start your free trial now and see results in 5 days.
+            Every day you wait, you&apos;re losing customers to businesses that
+            respond instantly. Start your free trial now and see results in 5
+            days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-6 text-lg font-semibold">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-6 text-lg font-semibold"
+            >
               Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold"
+            >
               Schedule Demo Call
             </Button>
           </div>
@@ -385,3 +439,4 @@ export default function Home() {
     </div>
   );
 }
+
