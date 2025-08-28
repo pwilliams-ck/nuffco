@@ -44,15 +44,16 @@ export const CategoryDropdown = ({
     >
       <div className="relative">
         <Button
-          variant="elevated"
+          variant="outline"
           className={cn(
-            "h-9 px-4 bg-transparent border-transparent rounded-full hover:bg-white hover:border-primary dark:border-transparent dark:bg-transparent dark:hover:border-secondary dark:hover:bg-white",
-            isActive && !isNavigationHovered && "bg-white border-black dark:bg-white dark:border-black text-black",
-            isOpen &&
-              "bg-white border-black dark:bg-white dark:border-black dark:hover:bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-x-[4px] -translate-y-[4px] dark:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+            "h-9 px-4 bg-transparent border-transparent font-medium text-slate-700 dark:text-slate-300 transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white rounded-md",
+            // Special styling for All Industries button
+            category.name === "All Industries" && "bg-blue-50 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800 border text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50",
+            isActive && !isNavigationHovered && "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold",
+            isOpen && "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold",
           )}
         >
-          <Link href={`/${category.slug === "all" ? "" : category.slug}`}>
+          <Link href={category.name === "All Industries" ? "/local-services" : `/${category.slug === "all" ? "" : category.slug}`}>
             {category.name}
           </Link>
         </Button>

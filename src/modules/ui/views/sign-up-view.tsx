@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Poppins } from "next/font/google";
+// import { Poppins } from "next/font/google";
 import { useRouter } from "next/navigation";
 import { useTRPC } from "@/trpc/client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -24,11 +24,12 @@ import {
 
 import { registerSchema } from "@/modules/auth/schemas";
 import Link from "next/link";
+import Image from "next/image";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["700"],
-});
+// const poppins = Poppins({
+//   subsets: ["latin"],
+//   weight: ["700"],
+// });
 
 export const SignUpView = () => {
   const router = useRouter();
@@ -76,11 +77,20 @@ export const SignUpView = () => {
           >
             <div className="flex items-center justify-between mb-8">
               <Link href="/">
-                <span
-                  className={cn("text-5xl font-semibold", poppins.className)}
-                >
-                  CKP
-                </span>
+                <Image
+                  src="/plain-logo.png"
+                  alt="Logo"
+                  width={160}
+                  height={80}
+                  className="dark:hidden"
+                />
+                <Image
+                  src="/plain-logo-dark.png"
+                  alt="Logo"
+                  width={160}
+                  height={80}
+                  className="hidden dark:block"
+                />
               </Link>
               <Button
                 asChild
@@ -93,9 +103,10 @@ export const SignUpView = () => {
                 </Link>
               </Button>
             </div>
-            <h1 className="text-4xl font-medium">
-              Join CloudKey, take control of your cloud.
-            </h1>
+            <h4 className="text-4xl font-medium">
+              Join aihelpd, <strong>You</strong> keep doing what{" "}
+              <strong>You</strong> do best, we do the rest.
+            </h4>
             <FormField
               name="username"
               render={({ field }) => (
@@ -151,7 +162,7 @@ export const SignUpView = () => {
           </form>
         </Form>
       </div>
-      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat"></div>
+      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat bg-[length:600px_187px] px-24 py-32"></div>
     </div>
   );
 };

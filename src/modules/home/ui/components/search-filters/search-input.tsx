@@ -28,7 +28,7 @@ export const SearchInput = ({ disabled }: Props) => {
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-neutral-500" />
         <Input
           className="pl-8 h-9 dark:bg-secondary dark:text-primary"
-          placeholder="Find CKP services..."
+          placeholder="Find local services..."
           disabled={disabled}
         />
       </div>
