@@ -71,7 +71,7 @@ export const SignInView = () => {
                 <span
                   className={cn("text-5xl font-semibold", poppins.className)}
                 >
-                  CKP
+                  aihelpd
                 </span>
               </Link>
               <Button
@@ -85,7 +85,7 @@ export const SignInView = () => {
                 </Link>
               </Button>
             </div>
-            <h1 className="text-4xl font-medium">Welcome back to CKP!</h1>
+            <h1 className="text-4xl font-medium">Welcome back to aihelpd!</h1>
             <FormField
               name="email"
               render={({ field }) => (
@@ -122,7 +122,10 @@ export const SignInView = () => {
           </form>
         </Form>
       </div>
-      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat"></div>
+      <div
+        className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat p-16"
+        style={{ backgroundSize: "250px 150px" }}
+      ></div>
     </div>
   );
 };

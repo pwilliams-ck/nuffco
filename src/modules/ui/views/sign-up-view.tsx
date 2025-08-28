@@ -79,7 +79,7 @@ export const SignUpView = () => {
                 <span
                   className={cn("text-5xl font-semibold", poppins.className)}
                 >
-                  CKP
+                  aihelpd
                 </span>
               </Link>
               <Button
@@ -94,7 +94,8 @@ export const SignUpView = () => {
               </Button>
             </div>
             <h1 className="text-4xl font-medium">
-              Join CloudKey, take control of your cloud.
+              Join aihelpd, <strong>You</strong> work on what{" "}
+              <strong>You</strong> best, we do the rest.
             </h1>
             <FormField
               name="username"
@@ -151,7 +152,10 @@ export const SignUpView = () => {
           </form>
         </Form>
       </div>
-      <div className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat"></div>
+      <div
+        className="h-screen w-full lg:col-span-2 hidden lg:block bg-[url('/plain-logo.png')] dark:bg-[url('/plain-logo-dark.png')] bg-repeat p-16"
+        style={{ backgroundSize: "250px 150px" }}
+      ></div>
     </div>
   );
 };
