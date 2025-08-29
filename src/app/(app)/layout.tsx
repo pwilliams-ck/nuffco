@@ -12,8 +12,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CloudKey Platform",
-  description: "Enterprise Virtual Data Center Solutions",
+  title: "aihelpd",
+  description: "Enterprise AI Automation Solutions",
 };
 
 export default function RootLayout({
