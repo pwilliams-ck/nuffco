@@ -95,7 +95,7 @@ export const SignUpView = () => {
             </div>
             <h1 className="text-4xl font-medium">
               Join aihelpd, <strong>You</strong> work on what{" "}
-              <strong>You</strong> best, we do the rest.
+              <strong>You</strong> do best, we do the rest.
             </h1>
             <FormField
               name="username"
