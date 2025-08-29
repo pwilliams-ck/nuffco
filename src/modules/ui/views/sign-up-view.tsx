@@ -79,7 +79,7 @@ export const SignUpView = () => {
                 <span
                   className={cn("text-5xl font-semibold", poppins.className)}
                 >
-                  aihelpd
+                  ai<span className="text-teal-600">help</span>d
                 </span>
               </Link>
               <Button
@@ -94,8 +94,9 @@ export const SignUpView = () => {
               </Button>
             </div>
             <h1 className="text-4xl font-medium">
-              Join aihelpd, <strong>You</strong> work on what{" "}
-              <strong>You</strong> best, we do the rest.
+              Join ai<span className="text-teal-600">help</span>d,{" "}
+              <strong>You</strong> work on what <strong>You</strong> best, we do
+              the rest.
             </h1>
             <FormField
               name="username"

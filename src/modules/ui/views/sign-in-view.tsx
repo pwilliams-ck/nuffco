@@ -71,7 +71,7 @@ export const SignInView = () => {
                 <span
                   className={cn("text-5xl font-semibold", poppins.className)}
                 >
-                  aihelpd
+                  ai<span className="text-teal-600">help</span>d
                 </span>
               </Link>
               <Button
